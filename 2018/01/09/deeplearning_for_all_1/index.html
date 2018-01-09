@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>모두를 위한 딥러닝 정리(1) | cheesev blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="ML" />
+    
+    <meta name="description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+<meta name="keywords" content="ML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="모두를 위한 딥러닝 정리(1)">
+<meta property="og:url" content="http://cheesev.github.io/2018/01/09/deeplearning_for_all_1/index.html">
+<meta property="og:site_name" content="cheesev blog">
+<meta property="og:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://cheesev.github.io/images/linear_reg_1.PNG">
+<meta property="og:updated_time" content="2018-01-09T08:00:11.664Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="모두를 위한 딥러닝 정리(1)">
+<meta name="twitter:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+<meta name="twitter:image" content="http://cheesev.github.io/images/linear_reg_1.PNG">
+    
+
+    
+        <link rel="alternate" href="/" title="cheesev blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">cheesev</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    uncategorized
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-deeplearning_for_all_1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        모두를 위한 딥러닝 정리(1)
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/01/09/deeplearning_for_all_1/" class="article-date">
+            <time datetime="2018-01-09T05:00:00.000Z" itemprop="datePublished">2018-01-09</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/ML/">ML</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="모두를-위한-딥러닝-정리노트-1"><a href="#모두를-위한-딥러닝-정리노트-1" class="headerlink" title="모두를 위한 딥러닝 정리노트 #1"></a>모두를 위한 딥러닝 정리노트 #1</h1><p>김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.<br><a href="https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm" target="_blank" rel="noopener">https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm</a></p>
+<h2 id="Linear-regression"><a href="#Linear-regression" class="headerlink" title="Linear regression"></a>Linear regression</h2><p>아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다. </p>
+<table>
+<thead>
+<tr>
+<th>x(hours)</th>
+<th>y(score)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>90</td>
+</tr>
+<tr>
+<td>3</td>
+<td>70</td>
+</tr>
+<tr>
+<td>2</td>
+<td>50</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>만약 몇 시간(x)동안 공부하면 몇 점(y)를 받을지 prediction(예측)하고 싶다고 하자. </p>
+<p>학습시간과 점수는 정비례한다는 가설을 세우고 이문제에 대해 접근해보자.</p>
+<p>가설함수<br>$$<br>H(x) = Wx +b<br>$$<br>를 위와 같이 정의하고 이를 그림으로 표현해보면</p>
+<p><img src="/images/linear_reg_1.PNG" alt="linear_reg_1"></p>
+<p>위와 같다. 파란점은 실제 데이터들이고, 빨간선은 우리가 세운 가설 H(x)이다. H(x)정도면 실제 데이터들의 값의 근사치를 예측할 수있겠다 싶은것이다. </p>
+<p>그런데 그런 H(x)를 어떻게 찾을수 있을 것일까??</p>
+<blockquote>
+<p>각 파란점들에서 빨간선으로 수직으로 내린 길이의 평균의 합이 가장 짧은 H(x)를 찾아보면 될거 같다. 그것이 모든 데이터들에 대해서 가장 근사하게 예측했다는 뜻이니까.</p>
+</blockquote>
+<p>수직으로 내린 길이의 평균의 합을 어떻게 수식으로 표현할까?<br>$$<br>cost(W,b) = \frac{1}{m}\sum_{i=1}^m (H(x^i) - y^i)^2<br>$$<br>위와 같이 표현한다.  H(x)가 W와 b에 관한 함수이기때문에 위와 같이 표현할 수 있다. </p>
+<p>우리는 이것을 “cost” 함수라고 부를 것이고, cost 함수를 최소화 하는 것이 우리가 해야할 일이다. </p>
+<h4 id="Gradient-Descent-algorithm"><a href="#Gradient-Descent-algorithm" class="headerlink" title="Gradient Descent algorithm"></a>Gradient Descent algorithm</h4><p>cost 함수를 최소화 하기 위해서 우리는 gradient(경사) descent(하강) 알고리즘이라는 것을 사용할 것이다. </p>
+<p>cost 함수는 아래와 같이 표현할 수 있는데, </p>
+<p><img src="/images/gradient_descent_1.PNG" alt="gradient_descent_1"></p>
+<p>cost함수에서 </p>
+<ul>
+<li>어느점에서 시작해도 상관없고,</li>
+<li>W와 b를 약간씩 반복적으로 조정하면서 cost(W,b)를 최소화 하는 법을 찾는것</li>
+</ul>
+<p>이 이 알고리즘의 핵심이다.  </p>
+<p>반복적으로 어떻게 조정할것인가? 에서 경사타기가 시작된다. 경사타기는 아래 식과 같이 이루어진다.</p>
+<p>$$<br>W:= W - \alpha\frac{\partial }{\partial W}cost(W)<br>$$<br>여기서 위의 a(알파)는 learning rate인데, 한번 경사를 탈때 얼마만큼 내려가나를 나타내는 상수이다.</p>
+<p>cost(W)함수는 이미 구한바 있으므로 위의 식에 대입해서 풀어보면</p>
+<p>아래와 같은 식으로 표현할 수 있는데 1/m이 1/2m으로 변한건 미분한 결과값을 깔끔하게 보이기 위함이다.<br>$$<br>W:= W - \alpha\frac{\partial }{\partial W}\frac{1}{2m}\sum_{i=1}^m (H(x^i) - y^i)^2<br>$$</p>
+<p>$$<br>W:= W - \alpha\frac{1}{2m}\sum_{i=1}^m 2(Wx^i - y^i)x^i<br>$$</p>
+<p>$$<br>W:= W - \alpha\frac{1}{m}\sum_{i=1}^m (Wx^i - y^i)x^i<br>$$</p>
+<p>미분을 하여 식을 정리해보면 맨 아래와 같은 Gradient descent 알고리즘의 식을 얻게된다.</p>
+<p>위 알고리즘을 써서 cost(W)특정 점에서 경사를 타고 내려오면서, cost(W)를 최소화할 값을 찾는 것이다.</p>
+<p>그럼 Gradient descent 알고리즘을 어디서나 쓸수있을까??</p>
+<p><img src="/images/gradient_descent_convex_1.PNG" alt="gradient_descent_convex_1"></p>
+<p>함수가 위와같으면 쓸수가없다. 어떤점에서 시작하는지에 따라 경사를 어디로 타는지 결정이 되고, 그에따라 “local minimum” 이 “global minimum”과 다른 현상이 나게 되므로, </p>
+<p>cost 함수의 모양이 다음과 같음을 확인하고 써야한다. </p>
+<p><img src="/images/gradient_descent_convex_2.PNG" alt="gradient_descent_convex_2"></p>
+<p>위와같은 함수를 convex function 이라고하고, 어떤 점에서 시작해도 global minimum에 도착한다.</p>
+<h2 id="Binary-Classification"><a href="#Binary-Classification" class="headerlink" title="(Binary) Classification"></a>(Binary) Classification</h2><p>위까지는 선형 문제에 대한 가설을 세우고 그걸 풀어보는 것을 해보았다. </p>
+<p>이제는 True / False로 주어지는 어떠한 문제</p>
+<ul>
+<li>Spam or Ham</li>
+<li>is cancer or not?</li>
+</ul>
+<p>위와 같은 문제를 해결하기 위한 가설을 세우고 예측을 해볼 것이다.</p>
+<p>가설함수는 0과 1 (false / true) 혹은 그 사이의 값을 가지게 하고싶은데, linear regression에서 썼던 가설 함수를 사용하게 되면 그게 안되므로 우리가 원하는걸 가능케하는 함수를 찾았는데 </p>
+<p>그것을 sigmoid 함수라고 하고 다음과 같이 그려진다.</p>
+<p><img src="/images/sigmoid_func.PNG" alt="sigmoid_func"></p>
+<p>sigmoid를 이용해서 가설 함수를 만든다.<br>$$<br>H(X) = \frac{1}{1+e^-W^TX}<br>$$<br>여기에 gradient descent 알고리즘을 써보려고하면 </p>
+<p>함수모양이 전에 적용했던 모양과 다르게 나와서 다음과 같이 global minimum에 도달하지 못한다.</p>
+<p><img src="/images/logistic_regression_gradient_descent.PNG" alt="logistic_regression_gradient_descent"></p>
+<p>그래서 cost 함수를 새로 설계해야 한다. 다음과 같이 설계를 한다.<br>$$<br>cost(W) = \frac{1}{m}\sum_{}C(H(x),y)<br>$$</p>
+<p>$$<br>C(H(x),y) = \begin{cases}-log(H(x)) &amp;&amp;  : y=1\[2ex] -log(1-H(x)) &amp;&amp; :y= 0\end{cases}<br>$$</p>
+<p>위와 같이 정리해 볼수 있는데, 그래프를 보면 더 이해가 쉽다.</p>
+<p><img src="/images/logistic_regression_costfunction.PNG" alt="logistic_regression_costfunction"></p>
+<p>위 수식을 간단하게 한 term으로 정리하면 아래와 같다.</p>
+<p>$$<br>C(H(x),y) = -ylog(H(x)) - (1-y)log(1-H(x))<br>$$<br>cost함수를 새로 설계했으니 gradient descent 알고리즘을 다시 적용하여 cost(W)를 minimize한다.</p>
+<h2 id="Multinomial-classification"><a href="#Multinomial-classification" class="headerlink" title="(Multinomial) classification"></a>(Multinomial) classification</h2><p>이전에는 binary classification에 대해서 배웠는데 분류대상이 3개이상의 n개로 늘어났을때는 어떻게 할까 생각해보자.</p>
+<p><img src="/images/multinomial_classification.PNG" alt="multinomial_classification"></p>
+<p>위 그림과 같이 분류대상이 A,B,C가 있고  각각 A인지 아닌지 B인지 아닌지, C인지 아닌지 분류하는 classifier를 생성하자. </p>
+<p><img src="/images/multinomial_classification_2.PNG" alt="multinomial_classification_2"></p>
+<p>위처럼 w1,w,2,w3의 독립된 행렬이 3개가 나오는데 이것을 아래와 같이 하나의 행렬로 합쳐서 표현해 볼 수 있다. </p>
+<p>그러면 행렬의 곱으로 나온 값은 우리가 예측하고자 했던 “Y”(Y의 hat) 값인데 이것은 </p>
+<p>저위의 그림박스안에 “S”라고 표현한 sigmoid함수를 거치기 전에는 </p>
+<p>[2.0</p>
+<p>1.0</p>
+<p>0.1</p>
+<p>]</p>
+<p>위와 같은 값일 것인데 이것을 행렬의 원소를 모두 더하면 “1”이 나오는 probability 값으로 바꾸고 싶다.</p>
+<p><img src="/images/softmax.PNG" alt="softmax"></p>
+<p>이걸 해주는 것을 softmax 라고 하고 다음의 식으로 표현이 된다.<br>$$<br>S(y_i) = \frac{e^{y<em>i}}{\sum</em>{j}e^{y_j}}<br>$$<br>softmax를 통해 나온 값, 위 그림에서</p>
+<p>[0.7</p>
+<p>0.2</p>
+<p>0.1]</p>
+<p>의 값에서 “야 하나만 알려줘, 예측한 값이 뭐야?” 라고 얘기하고싶다. 다른 값은 트레이닝에 의한 확률일뿐 필요가 없기 때문에.. 그래서 one hot encoding이라는 것을 통해 하나의 “1”값을 나타내고 나머지는 “0”으로 마스킹하고싶은데 tensorflow에서는 argmax라는 함수를 이용해서 이를 구현할 수 있다.</p>
+<p>[1.0</p>
+<p>0.0</p>
+<p>0.0]</p>
+<p>one hot encoding(argmax)를 쓰면 위와같이 값이 나오게 된다.</p>
+<p>자 이제, 학습한 것과 실제값의 차이를 확인하기 위해서 cost 함수를 설계한다.</p>
+<p>cost함수는 cross-entropy cost function이라는 것을 쓰는데</p>
+<p><img src="/images/cross_entropy_cost_function.PNG" alt="cross_entropy_cost_function"></p>
+<p>여기서 “L”은 실제 값이고 , “S”는 예측 값이다.<br>$$<br>-\sum_{i}L_ilog(\hat{y_i})<br>$$</p>
+<p>$$<br>\sum_iL_i-log(\hat{y_i})<br>$$</p>
+<p>L은 실제값이고 -log 함수는 밑의 그림의 오른쪽과 같이 그려지므로 </p>
+<p><img src="/images/cross_entropy_cost_function_2.PNG" alt="cross_entropy_cost_function_2"></p>
+<p>실제값이 B일때 “B”라고 예측(초록색) 하면 0 이나오고</p>
+<p>실제값이 B일때 “A”라고 예측(보라색) 하면 무한대로 발산한다.</p>
+<p>지금까지는 하나의 트레이닝데이터에 대해서 알아본 것이고, 여러개의 데이터셋으로 일반화 시키면</p>
+<p>cost function은 다음과 같이 나온다.</p>
+<p><img src="/images/cross_entropy_cost_function_3.PNG" alt="cross_entropy_cost_function_3"></p>
+<p>N개에 대해서 평균을 구하는 것이 이제까지 해왔던 것이랑 같다. </p>
+<p>여기서도 이전 방법에서와 마찬가지로 Gradient Descent 알고리즘을 통해서 cost를 minimize하는 방법을 사용한다.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://cheesev.github.io/2018/01/09/deeplearning_for_all_1/" data-id="cjc7cf5o10003mxlpa4il4j4h" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/01/03/JPAvsMyBatis_1/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">JPA vs Mybatis (1)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/09/deeplearning_for_all_1/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/linear_reg_1.PNG)" alt="모두를 위한 딥러닝 정리(1)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/01/09/deeplearning_for_all_1/" class="title">모두를 위한 딥러닝 정리(1)</a></p>
+                            <p class="item-date"><time datetime="2018-01-09T05:00:00.000Z" itemprop="datePublished">2018-01-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/03/JPAvsMyBatis_1/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/01/03/JPAvsMyBatis_1/" class="title">JPA vs Mybatis (1)</a></p>
+                            <p class="item-date"><time datetime="2018-01-03T05:00:00.000Z" itemprop="datePublished">2018-01-03</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JPA/">JPA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/JPA/" style="font-size: 10px;">JPA</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Dawun Jung</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://cheesev.github.io/2018/01/09/deeplearning_for_all_1/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
