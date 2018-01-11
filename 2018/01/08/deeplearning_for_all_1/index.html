@@ -3,25 +3,25 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>모두를 위한 딥러닝 정리(1) | cheesev blog</title>
+    <title>모두를 위한 딥러닝 정리 (1) | cheesev blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="ML" />
     
-    <meta name="description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+    <meta name="description" content="김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y(score)     5 90">
 <meta name="keywords" content="ML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="모두를 위한 딥러닝 정리(1)">
-<meta property="og:url" content="http://cheesev.github.io/2018/01/09/deeplearning_for_all_1/index.html">
+<meta property="og:title" content="모두를 위한 딥러닝 정리 (1)">
+<meta property="og:url" content="http://cheesev.github.io/2018/01/08/deeplearning_for_all_1/index.html">
 <meta property="og:site_name" content="cheesev blog">
-<meta property="og:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+<meta property="og:description" content="김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y(score)     5 90">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://cheesev.github.io/images/linear_reg_1.PNG">
-<meta property="og:updated_time" content="2018-01-09T08:00:11.664Z">
+<meta property="og:updated_time" content="2018-01-11T08:29:25.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="모두를 위한 딥러닝 정리(1)">
-<meta name="twitter:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+<meta name="twitter:title" content="모두를 위한 딥러닝 정리 (1)">
+<meta name="twitter:description" content="김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y(score)     5 90">
 <meta name="twitter:image" content="http://cheesev.github.io/images/linear_reg_1.PNG">
     
 
@@ -146,7 +146,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-        모두를 위한 딥러닝 정리(1)
+        모두를 위한 딥러닝 정리 (1)
         </h1>
     
 
@@ -156,8 +156,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/01/09/deeplearning_for_all_1/" class="article-date">
-            <time datetime="2018-01-09T05:00:00.000Z" itemprop="datePublished">2018-01-09</time>
+        <a href="/2018/01/08/deeplearning_for_all_1/" class="article-date">
+            <time datetime="2018-01-08T05:00:00.000Z" itemprop="datePublished">2018-01-08</time>
         </a>
     </div>
 
@@ -171,7 +171,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="모두를-위한-딥러닝-정리노트-1"><a href="#모두를-위한-딥러닝-정리노트-1" class="headerlink" title="모두를 위한 딥러닝 정리노트 #1"></a>모두를 위한 딥러닝 정리노트 #1</h1><p>김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.<br><a href="https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm" target="_blank" rel="noopener">https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm</a></p>
+            <p>김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.<br><a href="https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm" target="_blank" rel="noopener">https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm</a></p>
 <h2 id="Linear-regression"><a href="#Linear-regression" class="headerlink" title="Linear regression"></a>Linear regression</h2><p>아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다. </p>
 <table>
 <thead>
@@ -221,6 +221,8 @@
 <p>이 이 알고리즘의 핵심이다.  </p>
 <p>반복적으로 어떻게 조정할것인가? 에서 경사타기가 시작된다. 경사타기는 아래 식과 같이 이루어진다.</p>
 <p>$$<br>W:= W - \alpha\frac{\partial }{\partial W}cost(W)<br>$$<br>여기서 위의 a(알파)는 learning rate인데, 한번 경사를 탈때 얼마만큼 내려가나를 나타내는 상수이다.</p>
+<p><img src="/images/coursera_ML_GD_autoSMALLSTEP.PNG" alt="coursera_ML_GD_autoSMALLSTEP"></p>
+<p>위 빨간색 박스의 미분값이 점차적으로 작아지므로 learning rate - alpha를 굳이 줄이지 않아도 자동적으로 작은 스텝으로 경사를 타고 내려 간다.</p>
 <p>cost(W)함수는 이미 구한바 있으므로 위의 식에 대입해서 풀어보면</p>
 <p>아래와 같은 식으로 표현할 수 있는데 1/m이 1/2m으로 변한건 미분한 결과값을 깔끔하게 보이기 위함이다.<br>$$<br>W:= W - \alpha\frac{\partial }{\partial W}\frac{1}{2m}\sum_{i=1}^m (H(x^i) - y^i)^2<br>$$</p>
 <p>$$<br>W:= W - \alpha\frac{1}{2m}\sum_{i=1}^m 2(Wx^i - y^i)x^i<br>$$</p>
@@ -233,6 +235,7 @@
 <p>cost 함수의 모양이 다음과 같음을 확인하고 써야한다. </p>
 <p><img src="/images/gradient_descent_convex_2.PNG" alt="gradient_descent_convex_2"></p>
 <p>위와같은 함수를 convex function 이라고하고, 어떤 점에서 시작해도 global minimum에 도착한다.</p>
+<p>Linear regression의 cost함수는 항상 convex function 형태로 나타난다.</p>
 <h2 id="Binary-Classification"><a href="#Binary-Classification" class="headerlink" title="(Binary) Classification"></a>(Binary) Classification</h2><p>위까지는 선형 문제에 대한 가설을 세우고 그걸 풀어보는 것을 해보았다. </p>
 <p>이제는 True / False로 주어지는 어떠한 문제</p>
 <ul>
@@ -288,6 +291,56 @@
 <p><img src="/images/cross_entropy_cost_function_3.PNG" alt="cross_entropy_cost_function_3"></p>
 <p>N개에 대해서 평균을 구하는 것이 이제까지 해왔던 것이랑 같다. </p>
 <p>여기서도 이전 방법에서와 마찬가지로 Gradient Descent 알고리즘을 통해서 cost를 minimize하는 방법을 사용한다.</p>
+<h2 id="learning-rate-Overfitting-Regularization"><a href="#learning-rate-Overfitting-Regularization" class="headerlink" title="learning rate, Overfitting, Regularization"></a>learning rate, Overfitting, Regularization</h2><h5 id="learning-rate"><a href="#learning-rate" class="headerlink" title="learning rate"></a>learning rate</h5><p>learning rate는 너무 작게 주면 우리가 찾고자 하는 cost 함수의 최소값을 찾는게 느리게 되고,</p>
+<p>learning rate가 크면 발산하게 minimum 값을 못 찾고 발산(overshooting)하게 되는 경우가 생기므로,</p>
+<p>적절하게 조정을 해야하는데 강의에서는 0.01 정도로 주기를 권장함.</p>
+<h5 id="gradient-descent를-빠르게-하기-위한-방법"><a href="#gradient-descent를-빠르게-하기-위한-방법" class="headerlink" title="gradient descent를 빠르게 하기 위한 방법"></a>gradient descent를 빠르게 하기 위한 방법</h5><ol>
+<li><p>standardization</p>
+<p><img src="/images/regularization_standardization.PNG" alt="regularization_standardization"></p>
+<p>평균을 빼고 분산으로 나눠줌.</p>
+<p>​</p>
+</li>
+<li><p>feature scaling</p>
+</li>
+</ol>
+<p><img src="/images/coursera_ML_feature_scaling.PNG" alt="coursera_ML_feature_scaling"></p>
+<p>모든 feature를 -1&lt;= x &lt;= 1 사이로 만든다. </p>
+<ol>
+<li>mean normalization</li>
+</ol>
+<p><img src="/images/coursera_ML_Mean_normalization.PNG" alt="coursera_ML_Mean_normalization"></p>
+<h5 id="overfitting"><a href="#overfitting" class="headerlink" title="overfitting"></a>overfitting</h5><p><img src="/images/overfitting.PNG" alt="overfitting"></p>
+<p>train data set 에 너무 잘 맞도록 학습을 진행하여 특정 데이터셋에  overfit하게 만든 것을 overftting 되었다고 한다.</p>
+<p>overfitting을 줄이는법</p>
+<ol>
+<li>more training data</li>
+<li>reduce the number of features</li>
+<li>regularization</li>
+</ol>
+<p>overfitting 도 문제지만 underfitting 문제 - 설계한 모델이 cost function을 최소화하는데 적합하지 않음 - 도 있다.</p>
+<p>overfitting, underfitting을 해소하기 위해 우리는 model selection(hypothesis 선택) 부터 제대로 해야한다. </p>
+<p>coursera에서는..</p>
+<p><img src="/images/coursera_evaluate_hypothesis.PNG" alt="coursera_evaluate_hypothesis"></p>
+<p>위와 같이 60% 는 training set, 20%는 cross validation set, 20% 는 test set으로 사용하라고 한다.</p>
+<p>cross validation set으로는 다음과 같은 model selection을 하는 일을 할 수 있다.</p>
+<p><img src="/images/coursera_ML_model_selection.PNG" alt="coursera_ML_model_selection"></p>
+<p>hypothesis를 degree of polynomial  ( n차 다항식 ) 에 따라 n차까지 만들고 cross validation set을 이용해 </p>
+<p>cost function을 가장 작게 만들수 있는 n차 다항식을 선택한다. </p>
+<p>선택된 hypothesis를 test set으로 선택한 데이터를 이용해 테스트한다. </p>
+<p>이 때, 일반적으로 CV error 가 test error 보다 더 작은 값을 가지는데 선택한 모델이 CV set에 대해 fit하게 만들어져 있기 때문이다.</p>
+<p>linear regression에서 overfit, underfit 문제는 bias, variance를 진단하는 문제로 생각할 수 있는데</p>
+<p><img src="/images/coursera_ML_linear_regression_with_regularization.PNG" alt="coursera_ML_linear_regression_with_regularization"></p>
+<p>위그림 왼쪽아래가 High bias 인데 이와 같이 lamda값이 매우 클 경우에는 underfit되는 경향이 있고, lamda값이 작을 때, overfit되는 경향이 있다. </p>
+<p>김성훈 교수님 강좌에서 보면 lamda값 조정을 통해 overfit되는 곡선을 부드럽게 이을 수 있다고 하였는데 적절한 lamda 값을 사용하면 가운데와 같이 “just right”한 함수를 얻게 될 수 있다. </p>
+<p>위에서는 lamda값의 변화에 따른 그래프 변화를 본것이고, </p>
+<p>다음은 degree of polynomial에 따른 error 그래프이다.</p>
+<p><img src="/images/coursera_ML_diagnosing_bias_variance.PNG" alt="coursera_ML_diagnosing_bias_variance"></p>
+<p>위 그림의 x축은 다항식의 차수이고, y축은 error, trainig error J 함수는 위와 같이 다항식의 차수가 늘어남에 따라 overfit 되는 경향이 있으니 줄어든다. </p>
+<p>그리고, polynomial degree가 작고 bias가 클때 (그래프의 왼쪽 부분일때) train set, cv set 모두 큰 에러를 나타내고 있고,  degree가 올라감에 따라 J(cv error)함수는 낮아지다가 어떤 임계점 이상에서는 degree가 올라감에 따라 CV error 의 J함수의 값은 커지게 된다.</p>
+<p>그럼 어떻게 learning algorithm을 디버깅하여 예측을 잘 할 수 있을까?</p>
+<p><img src="/images/coursera_debugging_learning_algorithm.PNG" alt="coursera_debugging_learning_algorithm"></p>
+<p>위처럼 feature도 점차 증가시켜보고, polynomial feature도 점차 증가시켜보고,</p>
+<p> lamda값도 점차적으로 증가시켜보는 방법을 통해서 learning algorithm을 디버깅할 수있다.</p>
 
         </div>
         <footer class="article-footer">
@@ -295,7 +348,7 @@
 
 
 
-    <a data-url="http://cheesev.github.io/2018/01/09/deeplearning_for_all_1/" data-id="cjc7cf5o10003mxlpa4il4j4h" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://cheesev.github.io/2018/01/08/deeplearning_for_all_1/" data-id="cjc7cf5o10003mxlpa4il4j4h" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -454,10 +507,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/01/09/deeplearning_for_all_1/" class="thumbnail">
+                            <a href="/2018/01/08/deeplearning_for_all_1/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/linear_reg_1.PNG)" alt="모두를 위한 딥러닝 정리(1)" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/linear_reg_1.PNG)" alt="모두를 위한 딥러닝 정리 (1)" class="thumbnail-image"></span>
     
     
 </a>
@@ -466,8 +519,8 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/01/09/deeplearning_for_all_1/" class="title">모두를 위한 딥러닝 정리(1)</a></p>
-                            <p class="item-date"><time datetime="2018-01-09T05:00:00.000Z" itemprop="datePublished">2018-01-09</time></p>
+                            <p class="item-title"><a href="/2018/01/08/deeplearning_for_all_1/" class="title">모두를 위한 딥러닝 정리 (1)</a></p>
+                            <p class="item-date"><time datetime="2018-01-08T05:00:00.000Z" itemprop="datePublished">2018-01-08</time></p>
                         </div>
                     </li>
                 
@@ -571,7 +624,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://cheesev.github.io/2018/01/09/deeplearning_for_all_1/';
+    var disqus_url = 'http://cheesev.github.io/2018/01/08/deeplearning_for_all_1/';
     
     (function() {
     var dsq = document.createElement('script');
