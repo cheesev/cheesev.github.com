@@ -3,25 +3,24 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>모두를 위한 딥러닝 정리 (1) | cheesev blog</title>
+    <title>cheesev blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="ML" />
+        <meta name="keywords" content="" />
     
-    <meta name="description" content="김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y(score)     5 90">
-<meta name="keywords" content="ML">
+    <meta name="description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
 <meta property="og:type" content="article">
-<meta property="og:title" content="모두를 위한 딥러닝 정리 (1)">
-<meta property="og:url" content="http://cheesev.github.io/2018/01/08/deeplearning_for_all_1/index.html">
+<meta property="og:title" content="cheesev blog">
+<meta property="og:url" content="http://cheesev.github.io/2018/01/15/deeplearning_for_all_1/index.html">
 <meta property="og:site_name" content="cheesev blog">
-<meta property="og:description" content="김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y(score)     5 90">
+<meta property="og:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://cheesev.github.io/images/linear_reg_1.PNG">
-<meta property="og:updated_time" content="2018-01-11T08:29:25.626Z">
+<meta property="og:updated_time" content="2018-01-15T23:49:51.638Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="모두를 위한 딥러닝 정리 (1)">
-<meta name="twitter:description" content="김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y(score)     5 90">
+<meta name="twitter:title" content="cheesev blog">
+<meta name="twitter:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
 <meta name="twitter:image" content="http://cheesev.github.io/images/linear_reg_1.PNG">
     
 
@@ -142,36 +141,21 @@
                             <article id="post-deeplearning_for_all_1" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
-            <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name">
-        모두를 위한 딥러닝 정리 (1)
-        </h1>
-    
-
-            </header>
-        
         
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/01/08/deeplearning_for_all_1/" class="article-date">
-            <time datetime="2018-01-08T05:00:00.000Z" itemprop="datePublished">2018-01-08</time>
+        <a href="/2018/01/15/deeplearning_for_all_1/" class="article-date">
+            <time datetime="2018-01-15T23:49:51.638Z" itemprop="datePublished">2018-01-15</time>
         </a>
     </div>
 
                 
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/ML/">ML</a>
-    </div>
-
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.<br><a href="https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm" target="_blank" rel="noopener">https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm</a></p>
+            <h1 id="모두를-위한-딥러닝-정리노트-1"><a href="#모두를-위한-딥러닝-정리노트-1" class="headerlink" title="모두를 위한 딥러닝 정리노트 #1"></a>모두를 위한 딥러닝 정리노트 #1</h1><p>김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.<br><a href="https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm" target="_blank" rel="noopener">https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm</a></p>
 <h2 id="Linear-regression"><a href="#Linear-regression" class="headerlink" title="Linear regression"></a>Linear regression</h2><p>아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다. </p>
 <table>
 <thead>
@@ -206,7 +190,7 @@
 <p>위와 같다. 파란점은 실제 데이터들이고, 빨간선은 우리가 세운 가설 H(x)이다. H(x)정도면 실제 데이터들의 값의 근사치를 예측할 수있겠다 싶은것이다. </p>
 <p>그런데 그런 H(x)를 어떻게 찾을수 있을 것일까??</p>
 <blockquote>
-<p>각 파란점들에서 빨간선으로 수직으로 내린 길이의 평균의 합이 가장 짧은 H(x)를 찾아보면 될거 같다. 그것이 모든 데이터들에 대해서 가장 근사하게 예측했다는 뜻이니까.</p>
+<p>각 파란점들에서 빨간선으로 y축으로 내린 길이의 평균의 합이 가장 짧은 H(x)를 찾아보면 될거 같다. 그것이 모든 데이터들에 대해서 가장 근사하게 예측했다는 뜻이니까.</p>
 </blockquote>
 <p>수직으로 내린 길이의 평균의 합을 어떻게 수식으로 표현할까?<br>$$<br>cost(W,b) = \frac{1}{m}\sum_{i=1}^m (H(x^i) - y^i)^2<br>$$<br>위와 같이 표현한다.  H(x)가 W와 b에 관한 함수이기때문에 위와 같이 표현할 수 있다. </p>
 <p>우리는 이것을 “cost” 함수라고 부를 것이고, cost 함수를 최소화 하는 것이 우리가 해야할 일이다. </p>
@@ -348,7 +332,7 @@
 
 
 
-    <a data-url="http://cheesev.github.io/2018/01/08/deeplearning_for_all_1/" data-id="cjcbor49f0003zglpiagpsixs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://cheesev.github.io/2018/01/15/deeplearning_for_all_1/" data-id="cjcbor49f0003zglpiagpsixs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -485,20 +469,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/01/11/coursera_Week1/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Machine Learing - Coursera(week1)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2018/01/03/JPAvsMyBatis_1/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/01/15/coursera_Week3/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">JPA vs Mybatis (1)</p>
+        <p class="article-nav-title">Machine Learing - Coursera(week3)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -513,6 +487,26 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/01/15/deeplearning_for_all_1/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/linear_reg_1.PNG)" alt="" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/01/15/deeplearning_for_all_1/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2018-01-15T23:49:51.638Z" itemprop="datePublished">2018-01-15</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -577,26 +571,6 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/01/08/deeplearning_for_all_1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/linear_reg_1.PNG)" alt="모두를 위한 딥러닝 정리 (1)" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/01/08/deeplearning_for_all_1/" class="title">모두를 위한 딥러닝 정리 (1)</a></p>
-                            <p class="item-date"><time datetime="2018-01-08T05:00:00.000Z" itemprop="datePublished">2018-01-08</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2018/01/03/JPAvsMyBatis_1/" class="thumbnail">
     
     
@@ -636,7 +610,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JPA/">JPA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">4</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JPA/">JPA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -694,7 +668,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://cheesev.github.io/2018/01/08/deeplearning_for_all_1/';
+    var disqus_url = 'http://cheesev.github.io/2018/01/15/deeplearning_for_all_1/';
     
     (function() {
     var dsq = document.createElement('script');
