@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="ML" />
     
-    <meta name="description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+    <meta name="description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Machine LearningLimitation of explicit programming spam filter :">
 <meta name="keywords" content="ML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="모두를 위한 딥러닝(1)">
 <meta property="og:url" content="http://cheesev.github.io/2018/01/09/deeplearning_for_all_1/index.html">
 <meta property="og:site_name" content="cheesev blog">
-<meta property="og:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+<meta property="og:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Machine LearningLimitation of explicit programming spam filter :">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://cheesev.github.io/images/linear_reg_1.PNG">
-<meta property="og:updated_time" content="2018-01-15T23:59:17.973Z">
+<meta property="og:updated_time" content="2018-01-16T05:30:42.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="모두를 위한 딥러닝(1)">
-<meta name="twitter:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Linear regression아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다.     x(hours) y">
+<meta name="twitter:description" content="모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm Machine LearningLimitation of explicit programming spam filter :">
 <meta name="twitter:image" content="http://cheesev.github.io/images/linear_reg_1.PNG">
     
 
@@ -172,6 +172,20 @@
         
         <div class="article-entry" itemprop="articleBody">
             <h1 id="모두를-위한-딥러닝-정리노트-1"><a href="#모두를-위한-딥러닝-정리노트-1" class="headerlink" title="모두를 위한 딥러닝 정리노트 #1"></a>모두를 위한 딥러닝 정리노트 #1</h1><p>김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.<br><a href="https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm" target="_blank" rel="noopener">https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm</a></p>
+<h3 id="Machine-Learning"><a href="#Machine-Learning" class="headerlink" title="Machine Learning"></a>Machine Learning</h3><h5 id="Limitation-of-explicit-programming"><a href="#Limitation-of-explicit-programming" class="headerlink" title="Limitation of explicit programming"></a>Limitation of explicit programming</h5><ul>
+<li>spam filter : many rules</li>
+<li>Automatic driving : too many rules</li>
+</ul>
+<p>Machine Learning : 명시적으로 프로그래밍 하지 않아도 컴퓨터가 학습을 통해 어떠한 역할을 수행하는 것</p>
+<h5 id="Supervised-Unsupervised-Learning"><a href="#Supervised-Unsupervised-Learning" class="headerlink" title="Supervised / Unsupervised Learning"></a>Supervised / Unsupervised Learning</h5><ul>
+<li><p>supervised Learning : 라벨링된 데이터로부터 학습하여 새로운 example에 대해 예측하는 것</p>
+<p>ex) 아파트 가격 예측, 시험 점수 예측 등..</p>
+</li>
+<li><p>unsupervised Learning : 라벨링이 안된 데이터로부터 그 데이터들을 그룹핑하는 것</p>
+<p>ex) Google new grouping : 연관된 이슈를 가진 뉴스끼리 자동으로 묶어줌</p>
+</li>
+</ul>
+<h5 id="regression"><a href="#regression" class="headerlink" title="regression"></a>regression</h5><p> : 연속적인 값을 가지는 output을 예측하는 것. - ex) 시험점수가 0 ~100 사이</p>
 <h2 id="Linear-regression"><a href="#Linear-regression" class="headerlink" title="Linear regression"></a>Linear regression</h2><p>아래표는 ‘학습시간’에 따른 기말고사 점수를 나타낸 표이다. </p>
 <table>
 <thead>
@@ -208,17 +222,22 @@
 <blockquote>
 <p>각 파란점들에서 빨간선으로 y축으로 내린 길이의 평균의 합이 가장 짧은 H(x)를 찾아보면 될거 같다. 그것이 모든 데이터들에 대해서 가장 근사하게 예측했다는 뜻이니까.</p>
 </blockquote>
-<p>수직으로 내린 길이의 평균의 합을 어떻게 수식으로 표현할까?<br>$$<br>cost(W,b) = \frac{1}{m}\sum_{i=1}^m (H(x^i) - y^i)^2<br>$$<br>위와 같이 표현한다.  H(x)가 W와 b에 관한 함수이기때문에 위와 같이 표현할 수 있다. </p>
+<p>파란점에서 y축에 수직으로 내린 길이의 평균의 합을 어떻게 수식으로 표현할까?<br>$$<br>cost(W,b) = \frac{1}{m}\sum_{i=1}^m (H(x^i) - y^i)^2<br>$$<br>위와 같이 표현한다.  H(x)가 W와 b에 관한 함수이기때문에 위와 같이 표현할 수 있다. </p>
 <p>우리는 이것을 “cost” 함수라고 부를 것이고, cost 함수를 최소화 하는 것이 우리가 해야할 일이다. </p>
 <h4 id="Gradient-Descent-algorithm"><a href="#Gradient-Descent-algorithm" class="headerlink" title="Gradient Descent algorithm"></a>Gradient Descent algorithm</h4><p>cost 함수를 최소화 하기 위해서 우리는 gradient(경사) descent(하강) 알고리즘이라는 것을 사용할 것이다. </p>
-<p>cost 함수는 아래와 같이 표현할 수 있는데, </p>
+<p>알고리즘을 사용하기 전에 그림을 그려 이해하기 편하도록 H(x)를 간소화 하자. 그러면 H(x)와  cost(W)는 다음과 같은 형태로 나타나게 된다.<br>$$<br>H(x) = Wx<br>$$</p>
+<p>$$<br>cost(W) = \frac{1}{m}\sum_{i=1}^m (Wx^i - y^i)^2<br>$$</p>
+<p>cost(W)가 어떻게 생겼는지 알기 위해 sample data를 가져와서 그려보자.</p>
+<p><img src="/images/costW_look_like.png" alt="costW_look_like"></p>
+<p>W=2 일때는, cost(W) = 4.67 이다.</p>
+<p>그러면 cost(W) 함수는 아래와 같이 그래프로 표현할 수 있는데, </p>
 <p><img src="/images/gradient_descent_1.PNG" alt="gradient_descent_1"></p>
 <p>cost함수에서 </p>
 <ul>
 <li>어느점에서 시작해도 상관없고,</li>
 <li>W와 b를 약간씩 반복적으로 조정하면서 cost(W,b)를 최소화 하는 법을 찾는것</li>
 </ul>
-<p>이 이 알고리즘의 핵심이다.  </p>
+<p>이 이 알고리즘의 핵심이다.  - (여기서는 simplified hypothesis를 사용하므로 W만 조정)</p>
 <p>반복적으로 어떻게 조정할것인가? 에서 경사타기가 시작된다. 경사타기는 아래 식과 같이 이루어진다.</p>
 <p>$$<br>W:= W - \alpha\frac{\partial }{\partial W}cost(W)<br>$$<br>여기서 위의 a(알파)는 learning rate인데, 한번 경사를 탈때 얼마만큼 내려가나를 나타내는 상수이다.</p>
 <p><img src="/images/coursera_ML_GD_autoSMALLSTEP.PNG" alt="coursera_ML_GD_autoSMALLSTEP"></p>
@@ -236,6 +255,12 @@
 <p><img src="/images/gradient_descent_convex_2.PNG" alt="gradient_descent_convex_2"></p>
 <p>위와같은 함수를 convex function 이라고하고, 어떤 점에서 시작해도 global minimum에 도착한다.</p>
 <p>Linear regression의 cost함수는 항상 convex function 형태로 나타난다.</p>
+<h3 id="Multivariable-linear-regression"><a href="#Multivariable-linear-regression" class="headerlink" title="Multivariable linear regression"></a>Multivariable linear regression</h3><p>시험결과를 예측하는 우리의 문제에서 feature가 더 늘어났다고 하자. </p>
+<p><img src="/images/multivariable_linear_regression_example.PNG" alt="multivariable_linear_regression_example"></p>
+<p>위와 같이 늘어난 feature가 n개로 늘어나게 되면 linear regression을 어떻게 적용할까?<br>$$<br>H(x) = Wx + b<br>$$</p>
+<p>$$<br>H(x_1,x_2,x_3) = w_1x_1 + w_2x_2 + w_3x_3 + b<br>$$</p>
+<p>이것을 n개 로 일반화 하면 아래와 같이 표현되고<br>$$<br>H(x_1,x_2,x_3, …, x_n) = w_1x_1 + w_2x_2 + w_3x_3 + … +  w_nx_n+b<br>$$<br>이것을 행렬의 곱 형태로 표현하면 아래와 같은 형태로 나타난다.</p>
+<p><img src="/images/multivariable_hypothesis.png" alt="multivariable_hypothesis"></p>
 <h2 id="Binary-Classification"><a href="#Binary-Classification" class="headerlink" title="(Binary) Classification"></a>(Binary) Classification</h2><p>위까지는 선형 문제에 대한 가설을 세우고 그걸 풀어보는 것을 해보았다. </p>
 <p>이제는 True / False로 주어지는 어떠한 문제</p>
 <ul>
@@ -243,14 +268,14 @@
 <li>is cancer or not?</li>
 </ul>
 <p>위와 같은 문제를 해결하기 위한 가설을 세우고 예측을 해볼 것이다.</p>
-<p>가설함수는 0과 1 (false / true) 혹은 그 사이의 값을 가지게 하고싶은데, linear regression에서 썼던 가설 함수를 사용하게 되면 그게 안되므로 우리가 원하는걸 가능케하는 함수를 찾았는데 </p>
+<p>가설함수는 0과 1 (false / true) 혹은 그 사이의 값을 가지게 하고싶은데, linear regression에서 썼던 가설 함수를 사용하게 되면 그게 안되므로 0과 1사이 값을 가지게 할 수 있는 함수를 찾았는데 </p>
 <p>그것을 sigmoid 함수라고 하고 다음과 같이 그려진다.</p>
 <p><img src="/images/sigmoid_func.PNG" alt="sigmoid_func"></p>
 <p>sigmoid를 이용해서 가설 함수를 만든다.<br>$$<br>H(X) = \frac{1}{1+e^-W^TX}<br>$$<br>여기에 gradient descent 알고리즘을 써보려고하면 </p>
 <p>함수모양이 전에 적용했던 모양과 다르게 나와서 다음과 같이 global minimum에 도달하지 못한다.</p>
 <p><img src="/images/logistic_regression_gradient_descent.PNG" alt="logistic_regression_gradient_descent"></p>
 <p>그래서 cost 함수를 새로 설계해야 한다. 다음과 같이 설계를 한다.<br>$$<br>cost(W) = \frac{1}{m}\sum_{}C(H(x),y)<br>$$</p>
-<p>$$<br>C(H(x),y) = \begin{cases}-log(H(x)) &amp;&amp;  : y=1\[2ex] -log(1-H(x)) &amp;&amp; :y= 0\end{cases}<br>$$</p>
+<p>$$<br>C(H(x),y) = \begin{cases}-log(H(x)) &amp;&amp;  : y=1\-log(1-H(x)) &amp;&amp; :y= 0\end{cases}<br>$$</p>
 <p>위와 같이 정리해 볼수 있는데, 그래프를 보면 더 이해가 쉽다.</p>
 <p><img src="/images/logistic_regression_costfunction.PNG" alt="logistic_regression_costfunction"></p>
 <p>위 수식을 간단하게 한 term으로 정리하면 아래와 같다.</p>
@@ -262,10 +287,9 @@
 <p>위처럼 w1,w,2,w3의 독립된 행렬이 3개가 나오는데 이것을 아래와 같이 하나의 행렬로 합쳐서 표현해 볼 수 있다. </p>
 <p>그러면 행렬의 곱으로 나온 값은 우리가 예측하고자 했던 “Y”(Y의 hat) 값인데 이것은 </p>
 <p>저위의 그림박스안에 “S”라고 표현한 sigmoid함수를 거치기 전에는 </p>
-<p>[2.0</p>
-<p>1.0</p>
-<p>0.1</p>
-<p>]</p>
+<p>[ 20</p>
+<p>, 1.0</p>
+<p>, 0.1]</p>
 <p>위와 같은 값일 것인데 이것을 행렬의 원소를 모두 더하면 “1”이 나오는 probability 값으로 바꾸고 싶다.</p>
 <p><img src="/images/softmax.PNG" alt="softmax"></p>
 <p>이걸 해주는 것을 softmax 라고 하고 다음의 식으로 표현이 된다.<br>$$<br>S(y_i) = \frac{e^{y<em>i}}{\sum</em>{j}e^{y_j}}<br>$$<br>softmax를 통해 나온 값, 위 그림에서</p>
@@ -283,9 +307,9 @@
 <p>여기서 “L”은 실제 값이고 , “S”는 예측 값이다.<br>$$<br>-\sum_{i}L_ilog(\hat{y_i})<br>$$</p>
 <p>$$<br>\sum_iL_i-log(\hat{y_i})<br>$$</p>
 <p>L은 실제값이고 -log 함수는 밑의 그림의 오른쪽과 같이 그려지므로 </p>
-<p><img src="/images/cross_entropy_cost_function_2.PNG" alt="cross_entropy_cost_function_2"></p>
 <p>실제값이 B일때 “B”라고 예측(초록색) 하면 0 이나오고</p>
-<p>실제값이 B일때 “A”라고 예측(보라색) 하면 무한대로 발산한다.</p>
+<p>실제값이 B일때 “A”라고 예측(보라색) 하면 무한대로 발산한다. (계산시, element-wise 곱을 사용)</p>
+<p><img src="/images/cross_entropy_cost_function_2.PNG" alt="cross_entropy_cost_function_2"></p>
 <p>지금까지는 하나의 트레이닝데이터에 대해서 알아본 것이고, 여러개의 데이터셋으로 일반화 시키면</p>
 <p>cost function은 다음과 같이 나온다.</p>
 <p><img src="/images/cross_entropy_cost_function_3.PNG" alt="cross_entropy_cost_function_3"></p>
