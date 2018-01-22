@@ -3,26 +3,26 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>Machine Learing - Coursera(week2) | cheesev blog</title>
+    <title>Machine Learing - Coursera(week6) | cheesev blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="ML" />
     
-    <meta name="description" content="multivariate Linear regression지금까지 feature가 하나인 linear regression문제를 풀었고, 이제 feature가 여러개일때에 linear regression 문제를 풀어보도록 한다.  가설함수 h(x)는 위와 같이 나타낼 수 있고,  이때 x0 = 1이라고 정하면 벡터 X와 벡터 세타는 위와 같이 정의할 수 있고,">
+    <meta name="description" content="Evaluating a Learning AlgorithmDeciding What to Try Next여러가지 문제로 당신의 머신러닝 시스템이 예측을 제대로 못할수가 있다. 앞으로는 여러분들의 삽질(?)을 줄일 수 있는 테크닉들에 대해서 알아볼 것이다.  위 그림의 아래에 적은 리스트 처럼,  get more training example을 할수도 있다. 그">
 <meta name="keywords" content="ML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Machine Learing - Coursera(week2)">
-<meta property="og:url" content="http://cheesev.github.io/2018/01/12/coursera_Week2/index.html">
+<meta property="og:title" content="Machine Learing - Coursera(week6)">
+<meta property="og:url" content="http://cheesev.github.io/2018/01/22/coursera_Week6/index.html">
 <meta property="og:site_name" content="cheesev blog">
-<meta property="og:description" content="multivariate Linear regression지금까지 feature가 하나인 linear regression문제를 풀었고, 이제 feature가 여러개일때에 linear regression 문제를 풀어보도록 한다.  가설함수 h(x)는 위와 같이 나타낼 수 있고,  이때 x0 = 1이라고 정하면 벡터 X와 벡터 세타는 위와 같이 정의할 수 있고,">
+<meta property="og:description" content="Evaluating a Learning AlgorithmDeciding What to Try Next여러가지 문제로 당신의 머신러닝 시스템이 예측을 제대로 못할수가 있다. 앞으로는 여러분들의 삽질(?)을 줄일 수 있는 테크닉들에 대해서 알아볼 것이다.  위 그림의 아래에 적은 리스트 처럼,  get more training example을 할수도 있다. 그">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://cheesev.github.io/images/week2/coursera_ML_week2_multiple_feature.PNG">
-<meta property="og:updated_time" content="2018-01-12T08:53:18.084Z">
+<meta property="og:image" content="http://cheesev.github.io/images/week6/week6_debugging_algorithm.PNG">
+<meta property="og:updated_time" content="2018-01-22T12:08:05.256Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Machine Learing - Coursera(week2)">
-<meta name="twitter:description" content="multivariate Linear regression지금까지 feature가 하나인 linear regression문제를 풀었고, 이제 feature가 여러개일때에 linear regression 문제를 풀어보도록 한다.  가설함수 h(x)는 위와 같이 나타낼 수 있고,  이때 x0 = 1이라고 정하면 벡터 X와 벡터 세타는 위와 같이 정의할 수 있고,">
-<meta name="twitter:image" content="http://cheesev.github.io/images/week2/coursera_ML_week2_multiple_feature.PNG">
+<meta name="twitter:title" content="Machine Learing - Coursera(week6)">
+<meta name="twitter:description" content="Evaluating a Learning AlgorithmDeciding What to Try Next여러가지 문제로 당신의 머신러닝 시스템이 예측을 제대로 못할수가 있다. 앞으로는 여러분들의 삽질(?)을 줄일 수 있는 테크닉들에 대해서 알아볼 것이다.  위 그림의 아래에 적은 리스트 처럼,  get more training example을 할수도 있다. 그">
+<meta name="twitter:image" content="http://cheesev.github.io/images/week6/week6_debugging_algorithm.PNG">
     
 
     
@@ -139,14 +139,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-coursera_Week2" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-coursera_Week6" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Machine Learing - Coursera(week2)
+        Machine Learing - Coursera(week6)
         </h1>
     
 
@@ -156,8 +156,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/01/12/coursera_Week2/" class="article-date">
-            <time datetime="2018-01-12T05:00:00.000Z" itemprop="datePublished">2018-01-12</time>
+        <a href="/2018/01/22/coursera_Week6/" class="article-date">
+            <time datetime="2018-01-22T05:00:00.000Z" itemprop="datePublished">2018-01-22</time>
         </a>
     </div>
 
@@ -171,47 +171,108 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h5 id="multivariate-Linear-regression"><a href="#multivariate-Linear-regression" class="headerlink" title="multivariate Linear regression"></a>multivariate Linear regression</h5><p>지금까지 feature가 하나인 linear regression문제를 풀었고, 이제 feature가 여러개일때에 linear regression 문제를 풀어보도록 한다.</p>
-<p><img src="/images/week2/coursera_ML_week2_multiple_feature.PNG" alt="coursera_ML_week2_multiple_feature"></p>
-<p>가설함수 h(x)는 위와 같이 나타낼 수 있고,  이때 x0 = 1이라고 정하면 벡터 X와 벡터 세타는 위와 같이 정의할 수 있고, h(x)는 간단하게 “세타 transpose X”로 표현 할 수 있다.</p>
-<p>이제 multivariate linear regression의 cost function에 대해서 알아보자.</p>
-<p><img src="/images/week2/coursera_ML_week2_gd_for_multiple_variable.PNG" alt="coursera_ML_week2_gd_for_multiple_variable"></p>
-<p>위와 같은 식으로 나타나게 되고, </p>
-<p>n=1일때와는, 세타0일때  x0(i)를 곱해주고, 세타1일때 x1(i)를 곱해주는 것만 다르다. (그부분은 편미분 적용하는 식이니까)</p>
-<h5 id="feature-scailing"><a href="#feature-scailing" class="headerlink" title="feature scailing"></a>feature scailing</h5><p><img src="/images/week2/coursera_ML_week2_feature_scaling.PNG" alt="coursera_ML_week2_feature_scaling"></p>
-<p>x1 과 x2이 가지는 값의 범위차가 크면 위의 왼쪽 그래프와 같은 contour plot 이 나올 수가있다. 그럴 경우에 그림에서 보듯 gradient descent가 어디로 내려갈지를 제대로 찾지 못하고 이쪽 저쪽 내려가며 헤매는 경우를 겪을 수 있는데 이를 해소하기 위하여 feature scaling이라는 방법을 쓰는데 오른쪽과 같이 </p>
-<p>각 범위의 최대값으로 나눠줘서</p>
-<p>x1, x2를 0과 1사이의 값으로 만들어주면 contour plot이 오른쪽과 같이 된다. </p>
-<p><img src="/images/week2/coursera_ML_week2_feature_scaling2.PNG" alt="coursera_ML_week2_feature_scaling"></p>
-<p>위와 같이 모든 feature가 대략 -1에서 1사이의 값을 가지도록 설정을 해야 gradient descent algorithm이 잘 돌아간다. 위 그림에서 x표로 표시한 feature 처럼 값의 범위가 너무 벗어나 있으면 feature scaling을 통해 값을 조정하자.</p>
-<h5 id="feature-scaling-mean-normalization"><a href="#feature-scaling-mean-normalization" class="headerlink" title="feature scaling - mean normalization"></a>feature scaling - mean normalization</h5><p>feature scaling의 한 방법으로 mean normalization이라는 것을 쓸수가 있는데, </p>
-<p><img src="/images/week2/coursera_ML_week2_feature_scaling3.PNG" alt="coursera_ML_week2_feature_scaling"></p>
-<p>위와 같이 </p>
-<p>x1에 (x -u1) / s1 을 하는 것이다.  (x2, x3도 같은…식으로)</p>
-<p>u1 : train set 에 있는 x1의 평균값</p>
-<p>s1 : max - min (범위),  or 분산(standard deviation)을 써도 된다.</p>
-<h5 id="learning-rate"><a href="#learning-rate" class="headerlink" title="learning rate"></a>learning rate</h5><p><img src="/images/week2/coursera_ML_week2_learning_rate.PNG" alt="coursera_ML_week2_learning_rate"></p>
-<p>위 왼쪽 그래프의 x축은 gradient descent algorithm 반복횟수 (No. of iteration)</p>
-<p>y축은 cost function J의 값이다. </p>
-<p>cost function J는 계속 해서 감소하지만 어느 순간(300~ 400 반복사이)부터 거의 감소하지 않고 일정한 수준을 유지하게 된다. </p>
-<p>그래서 <strong>주로 왼쪽처럼 그래프를 그려서 converge 하는지 확인</strong>하는데, </p>
-<p>이를 자동화할 수 있는 방법으로 작은 epsilon 값을 하나 정해서 각 iteration마다 정한 epsilon 값보다 떨어지면 converge했다고 정할 수 있다. </p>
-<p><strong>그런데, 이 epsilon 값도 정하기가 어려우므로 보통 왼쪽의 그래프를 그려서 확인하는 방법을 쓴다.</strong></p>
-<p><img src="/images/week2/coursera_ML_week2_learning_rate2.PNG" alt="coursera_ML_week2_learning_rate"></p>
-<p>cost function J가 왼쪽 그래프와 같다면 learning rate가 크다는 얘기이고, 오른쪽 그래프처럼 세타값이 업데이트 되면서 발산하게 된다 이럴때는 alpha값을 더 작게 해준다.</p>
-<p>alpha 값이 너무 작으면 gradient descent가 너무 느리므로 적절한 값을 넣어주는 것이 중요하다.</p>
-<p>Andrew Ng 교수가 할때는</p>
-<p>0.001, 0.003, 0.01 , 0.03 , 0.1 , 0.3, 1</p>
-<p>이렇게 약 3배정도씩 증가시키면서, 가장 큰 learning rate의 가장 작은 값과 큰 값을 얻은 다음에</p>
-<p>가장 큰값을 선택하거나 가장 큰값보다 약간 작은값을 learning rate로 선정한다고 한다.</p>
-<h5 id="features-and-polynomial-regression"><a href="#features-and-polynomial-regression" class="headerlink" title="features and polynomial regression"></a>features and polynomial regression</h5><p>때로는 feature간의 연산으로 하나의 feature를 만들어서 사용할수 있다. 다음 예를 보자.</p>
-<p><img src="/images/week2/coursera_ML_week2_feature_polynomial1.PNG" alt="coursera_ML_week2_feature_polynomial1"></p>
-<p>위와 같이 집값을 예측하는 모델을 만든다고 할 때에, 대지의 가로 세로를 각각 feature로 사용하는 것보다 단순하게 area = 가로 * 세로 로 사용할 수 있다. </p>
-<p><img src="/images/week2/coursera_ML_week2_feature_polynomial2.PNG" alt="coursera_ML_week2_feature_polynomial1"></p>
-<p>그렇게 feature를 하나로 한정시키고 이에 대한 h(x)를 위와 같이 3차함수로 설정하자. 2차함수로 설정시 올라갔다가 다시 내려오는 형태가 되므로 3차함수로 정했다. </p>
-<p>3차 함수는 왼쪽 아래처럼 나오게 되므로 각 항의 값 범위(size, size제곱, size세제곱)가 크므로 feature scaling을 통해 gradient descent가 잘 돌아가도록 해야한다.</p>
-<p>3차 함수로 하지않고 루트 함수로 가설함수를 세우면 train data에 더 fit하게 할 수 있다.</p>
-<p>feature를 우리가 정하지않고 data를 보고 자동적으로 feautre를 select 할수 있는 알고리즘도 있는데, 그것은 다음에 배우도록 한다. 여기서는  다항함수나, 루트함수등으로 데이터를 표현할 수도 있다는 것을 살펴보았다.</p>
+            <h3 id="Evaluating-a-Learning-Algorithm"><a href="#Evaluating-a-Learning-Algorithm" class="headerlink" title="Evaluating a Learning Algorithm"></a>Evaluating a Learning Algorithm</h3><h5 id="Deciding-What-to-Try-Next"><a href="#Deciding-What-to-Try-Next" class="headerlink" title="Deciding What to Try Next"></a>Deciding What to Try Next</h5><p>여러가지 문제로 당신의 머신러닝 시스템이 예측을 제대로 못할수가 있다. 앞으로는 여러분들의 삽질(?)을 줄일 수 있는 테크닉들에 대해서 알아볼 것이다.</p>
+<p><img src="/images/week6/week6_debugging_algorithm.PNG" alt="week4_debugging_algorithm"></p>
+<p>위 그림의 아래에 적은 리스트 처럼, </p>
+<p>get more training example을 할수도 있다. 그런데, 아무리 많은 training 데이터를 집어넣어도 새 값에 대한 예측은 제대로 못할수가 있다.  그 밖에 다른 방법들도 마찬가지… 어떻게 적절하게 변수들(feature, lamda, polynomial feature 등..) 조절할 것인가에 대한 것을 이번주에 알아보기로한다.</p>
+<h5 id="Evaluating-a-Hypothesis"><a href="#Evaluating-a-Hypothesis" class="headerlink" title="Evaluating a Hypothesis"></a>Evaluating a Hypothesis</h5><p>모든 dataset을 train data set으로 사용하면 마치 답을 알고 시험을 치는 것처럼 train data set에 “overfit” 될 수 있다. 이 것을 해소하기 위해 다음 그림처럼 data set의 70%는 training set, 30%는 test set으로 나누는 방법을 생각해 볼 수 있다.</p>
+<p><img src="/images/week6/week6_evaluating_hypothesis.png" alt="week6_evaluating_hypothesis"></p>
+<p>linear regression은 위의 과정처럼 </p>
+<ol>
+<li>train data set으로 학습시켜 cost function J(theta)를 최소화시키는 theta 값을 찾고</li>
+<li>test data set 으로 cost function J(theta)를 평가한다. </li>
+</ol>
+<p>logistic regression은 어떨까?</p>
+<p><img src="/images/week6/week6_training_testing_logistic_regression.png" alt="week6_training_testing_logistic_regression"></p>
+<p>logistic regression도 linear regression과 같은 방법을 사용할 수 있다. </p>
+<p>아니면, <em>misclassification error</em> 를 이용해도 된다.  <code>y = 0</code> 일때 <code>h(x) &lt; 0.5</code> 이어야 하고, <code>y = 1</code> 일때 <code>h(x) =&gt; 0.5</code> 이어야 하기 때문에 엇갈리게 나온 경우 <code>err</code> 함수에서 <code>1</code> 을 리턴해, 이 값을 모두 합한 뒤 전체 테스트 셋의 숫자로 나누면 테스트 에러를 구할 수 있다.</p>
+<h5 id="Model-Selection-and-Train-Validation-Test-Sets"><a href="#Model-Selection-and-Train-Validation-Test-Sets" class="headerlink" title="Model Selection and Train/Validation/Test Sets"></a>Model Selection and Train/Validation/Test Sets</h5><p>“overfitting”에 대해서 알아보았다. 우리는 “overfitting”을 피하고, 값을 잘 예측할 수 있는 모델을 원하는데 어떻게 그런 모델을 고를 수 있을까? 이에 대해서 알아보자.</p>
+<p><img src="/images/week6/week6_model_selection.png" alt="wee6_model_selection"></p>
+<p>1 ~ 10차까지의 차수를 가지는 가설함수 10개를 만들고, 각각 test data set으로 돌려 cost function J값을 알아낸다. 이때, 가장작은 cost function 값을 가지는 model의 차수를 선택했더니 예제에서 처럼 5차 다항식이 나왔다고 하자. 그런데, 이 모델은 test set에 “fit”하게 선택되었으므로 새로운 example이 나오게 되면 제대로 예측하지 못할 것 같다.</p>
+<p>그래서 다음의 방법을 이용한다.</p>
+<p><img src="/images/week6/week6_evaluating_hypothesis_with_cv.png" alt="week6_evaluating_hypothesis_with_cv"></p>
+<p>이전의 방법과는 다르게 전체 data set의 60%는 training set, 20%는 cross validation set, 20%는 test set으로 한다. </p>
+<p>그러면 위에서 test data set으로 했던 model selection 과정을 cross validation set으로 똑같이 한다. </p>
+<p><img src="/images/week6/week6_model_selection_with_cv.png" alt="week6_model_selection_with_cv"></p>
+<p>그래서 봤더니 4차 다항식이 선택이 됐고, 이 선택된 다항식은 이전처럼 test data set에 “overfit”되지 않은 것이므로, 이것을 test set에 적용해보면 일반적인 에러값에 대한 추정치를 얻을 수가 있다. </p>
+<h3 id="Bias-vs-Variance"><a href="#Bias-vs-Variance" class="headerlink" title="Bias vs. Variance"></a>Bias vs. Variance</h3><p>모델이 잘 돌아가지 않을 때, 많은 경우 high bias problem 이거나 high variance problem, 즉 “underfit” or “overfit” problem이다. 이럴때 내 모델이 어떤경우인지 판단하고 그것에 맞게 모델에 고쳐나가는 것은 매우 중요한 일이므로 이것에 대해 알아보자.</p>
+<h4 id="Dignosing-Bias-vs-Variance"><a href="#Dignosing-Bias-vs-Variance" class="headerlink" title="Dignosing Bias vs. Variance"></a>Dignosing Bias vs. Variance</h4><p><img src="/images/week6/week6_training_error_cv_error_graph.png" alt="week6_training_error_cv_error_graph"></p>
+<p>다항식의 차수가 늘어 날수록 train data set에 더 알맞는 h(x)를 찾을 수가 있다 그래서, 위의 분홍색 그래프와 같은 형태가 나오게 되고, </p>
+<p>cross validation set은 차수가 작으면 “underfit”(High Bias) 때문에 error가 많아지고, 특정 차수까지 에러가 감소하다가, 특정 차수 이후부터 train data set에 “overfit”된 모델(High variance)때문에 error(cost function J)가 점점 많아지게 된다. </p>
+<p>High Bias (underfit)일 때는, J_train(theta)와 J_cv(theta)가 거의 비슷하게 높은데,</p>
+<p>High Variance(overfit)일 때는, J_train(theta)는 낮은데, J_cv(theta)는 이와 비교하여 매우 크게 된다.</p>
+<h3 id="Regularization-and-Bias-Variance"><a href="#Regularization-and-Bias-Variance" class="headerlink" title="Regularization and Bias/Variance"></a>Regularization and Bias/Variance</h3><p>regularization이 “overfit”된 모델 문제를 고칠 수 있다고 얘기했었다. </p>
+<p><img src="/images/week6/week6_linear_regression_with_regularization.png" alt="week6_linear_regression_with_regularization"></p>
+<p>위 그림처럼 lamda가 크면 High bias(underfit)이 되고 , lamda가 작으면 High variance(overfit)이 된다. 가운데 그래프처럼 적절한 lamda값을 찾는 것이 우리가 하고 싶은 것인데 어떻게 하면 자동으로 lamda 값을 찾을 수 있을까?</p>
+<p><img src="/images/week6/week6_choosing_regularization_param_lamda.png" alt="week6_choosing_regularization_param_lamda"></p>
+<p>위의 과정은 아래의 내용으로 정리한다.</p>
+<ol>
+<li>Create a list of lambdas (i.e. λ∈{0,0.01,0.02,0.04,0.08,0.16,0.32,0.64,1.28,2.56,5.12,10.24});</li>
+<li>Create a set of models with different degrees or any other variants.</li>
+<li>Iterate through the λs and for each λ go through all the models to learn some Θ.</li>
+<li>Compute the cross validation error using the learned Θ (computed with λ) on the JCV(Θ) <strong>without</strong> regularization or λ = 0.</li>
+<li>Select the best combo that produces the lowest error on the cross validation set.</li>
+<li>Using the best combo Θ and λ, apply it on Jtest(Θ) to see if it has a good generalization of the problem.</li>
+</ol>
+<h5 id="Learning-curves"><a href="#Learning-curves" class="headerlink" title="Learning curves"></a>Learning curves</h5><p>learning curve는 당신의 모델이 High bias , High variance problem등의 겪고있지않은지, 잘돌아가는지 확인하고 있을때 활용할 수 있다.</p>
+<p><img src="/images/week6/week6_learning_curves.png" alt="week6_learning_curves"></p>
+<p>training set size가 작으면 J_train(Θ)는 주어진 data 에 비슷하게 맞출 수 있고, training set size가 늘어남에 따라 error가 커진다. </p>
+<p>반면에, J_cv(Θ)는 train set size가 작으면 error가 커지고, training set size가 커짐에 따라 error가 작아지게 된다.</p>
+<h6 id=""><a href="#" class="headerlink" title=""></a><img src="/images/week6/week6_high_bias.learinig_curve.png" alt="week6_high_bias.learinig_curve"></h6><p>위그림처럼 설계한 모델이 high bias problem을 겪고 있다면 training set size를 증가시켜도 error는 비슷하게 나올 것이다. data set을 잘 예측하지 못하므로, error율은 J_train과 J_cv 모두 상대적으로 높을 것이다.</p>
+<p><img src="/images/week6/week6_high_variance_learning_curve.png" alt="week6_high_variance_learning_curve"></p>
+<p>반면에 High variance 일때는 J_train과 J_cv의 gap이 크다. </p>
+<p>하지만 training set size를 아주 많이 증가 시키면 어떨까? training set size 증가함에 따라서 위 그림과 같이 J_train의 error율은 조금씩 높아지고, J_cv의 error율은 점점 낮아진다. (J_test도 마찬가지) </p>
+<h3 id="Error-Analysis"><a href="#Error-Analysis" class="headerlink" title="Error Analysis"></a>Error Analysis</h3><h5 id="Recommend-approach"><a href="#Recommend-approach" class="headerlink" title="Recommend approach"></a>Recommend approach</h5><ul>
+<li>심플한 알고리즘부터 시작해라. 그리고 cv data 로 테스트해봐라.</li>
+<li>learning curve를 그려봐라</li>
+<li>Error analysis를 해라.<ul>
+<li>CV data set에서 수동으로 example을 검사해봐라 . spam filter의 경우에 spam을 잘 못 걸러낸 경우에 대해서 검사해본다. 어떤 항목에서 에러가 발생했는지 체계적으로 검사해라. </li>
+</ul>
+</li>
+</ul>
+<p>Error Analysis example을 살펴보자.</p>
+<p><img src="/images/week6/week6_error_analysis_example.png" alt="week6_error_analysis_example"></p>
+<p>CV data set이 500개인데 100개의 email을 spam 처리를 못했다고하면, </p>
+<ol>
+<li>그 data set에서 error를 category로 나눠서 살펴본다.</li>
+<li>어떤 feature가 classify를 잘 할 수 있는지 생각해본다.</li>
+</ol>
+<p>그리고 수식 평가를 해본다.</p>
+<p><img src="/images/week6/week6_error_analysis_numerical_evaluation.png" alt="week6_error_analysis_numerical_evaluation"></p>
+<p>discount / discounting / discounted  이런 단어들을 같은 단어라고 치고 있는가? 를 보고 이를 적용/비적용하여 CV error를 평가해본다. </p>
+<p>With Stemming(어근(?)평가) : 3% </p>
+<p>대문자, 소문자 구분 : 3.2 % </p>
+<p>가 나왔다면 대소문자 구분은 크게 영향을 미치지 않는다고 치고, 더 중요한 stemming에 집중 할 수 있다.</p>
+<p><strong>한줄요약 :</strong></p>
+<p><strong>quick and dirty application을 만들어서 빨리 해보고, 어떤 error 에 집중할 것인지 파악하여 그것에 집중하라.</strong></p>
+<h3 id="Handling-Skewed-Data"><a href="#Handling-Skewed-Data" class="headerlink" title="Handling Skewed Data"></a>Handling Skewed Data</h3><h5 id="Error-Metrics-for-Skewed-Classes"><a href="#Error-Metrics-for-Skewed-Classes" class="headerlink" title="Error Metrics for Skewed Classes"></a>Error Metrics for Skewed Classes</h5><p>이제 아주 작은 확률로 일어나는 일에 대해서 classify 하는 알고리즘을 풀어보자.</p>
+<p><img src="/images/week6/week6_skewed_data_cancer_classification.png" alt="week6_skewed_data_cancer_classification"></p>
+<p>암 환자를 가려내는 알고리즘을 짰는데 test set에서 겨우 1% 에러만 발견되었다. 제대로 예측한 건가??</p>
+<p>아무도 암환자가 아니라고 리턴하는 알고리즘을 만들면 0.5%에러만 발견 된다면, 즉, 암환자가 0.5%정도 밖에 안되는 문제라면 제대로 예측하지 못한거다.</p>
+<p>그래서 이러한 문제를 평가하기 위해 Precision / Recall 이라는 새로운 개념을 가져온다.</p>
+<p><img src="/images/week6/week6_precision_recall.png" alt="week6_precision_recall"></p>
+<p>Precision(정확도) : 우리가 암이라고 생각한 환자중에서 실제로 암인사람 몇명?</p>
+<p>Recall(재현율) : 암을 가지고 있는 사람 중에서 우리가 실제로 찾아낸 사람은 몇명?</p>
+<p>좋은 알고리즘은 Precision / Recall 모두 수치가 높아야하고,</p>
+<p>Recall 개념을 쓰면, 아까 위에서 간단하게 짠 함수는 모두 암이라고 얘기했으니, Recall = 0 인 것이 되어서 안좋은 알고리즘이다.</p>
+<p><strong>주의 : y=1 를 나타내는 class는 드문것에 적용해라. (여기선, 암환자)</strong></p>
+<p>(안그러면 위의 True Positive 4분면들이 바뀌니까… 안헷갈리기 위해서)</p>
+<h3 id="Trading-Off-Precision-and-Recall"><a href="#Trading-Off-Precision-and-Recall" class="headerlink" title="Trading Off Precision and Recall"></a>Trading Off Precision and Recall</h3><p>Precision 과 Recall 사이에는 Trade Off가 존재한다.</p>
+<p><img src="/images/week6/week6_TradingOff_precision_recall.png" alt="week6_TradingOff_precision_recall"></p>
+<p>암을 진단하는 예를 생각해보자. </p>
+<p>아주 확실한 경우에만 암이라고 진단한다고 하자.(Logistic regression으로 생각해보면 h(x)&gt;= 0.9 라고 치자)</p>
+<p> 그러면 Precision(정확도) 는 올라가고 Recall(재현율)은 내려간다.</p>
+<p>반대로, 대충봐서 암 같으면 암이라고 진단하자. (Logistic regression으로 생각해보면 h(x)&gt;= 0.3 라고 치자)</p>
+<p>그러면 Recall(재현율)은 올라가고 Precision(정확도)는 내려간다.</p>
+<p>이렇게 반비례 관계를 갖게 되는데 문제에 따라서 그래프는 오른쪽위에 보듯이 다양하게 그려진다.</p>
+<p>그런데… Precision과 Recall이 적절하게 높도록 h(x)의 threshold를 자동으로 조절할 수 없을까?</p>
+<p><img src="/images/week6/week6_F1Score.png" alt="week6_F1Score"></p>
+<p>그런 개념에서 나온것이 F1 Score(also called, F Score)인데</p>
+<p>Precision과 Recall중 하나만 높다고 좋은 알고리즘이라고 평가 할 수 없으니, 두개를 동시에 높아야 된다는 것이다.</p>
+<p>그래서 위 알고리즘 세개를 놓고 보면 맨 마지막 세번째 알고리즘은 Recall은 높지만 Precision은 현저히 낮으므로, F Score가 안좋기때문에 좋은 알고리즘이라고 얘기할 수 없다.</p>
+<h3 id="Using-Large-Data-Sets"><a href="#Using-Large-Data-Sets" class="headerlink" title="Using Large Data Sets"></a>Using Large Data Sets</h3><h5 id="Data-For-Machine-Learning"><a href="#Data-For-Machine-Learning" class="headerlink" title="Data For Machine Learning"></a>Data For Machine Learning</h5><p><img src="/images/week6/week6_using_large_datasets.png" alt="week6_using_large_datasets"></p>
+<p>어떤 알고리즘을 쓰던 결국에 데이터가 엄청 많으면 거의 비슷한 값으로 수렴한다는 것을 볼 수가 있다..</p>
+<p><strong>요약하면 데이터 많이 가지고 있는게 장땡이란 소리다.</strong></p>
 
         </div>
         <footer class="article-footer">
@@ -219,7 +280,7 @@
 
 
 
-    <a data-url="http://cheesev.github.io/2018/01/12/coursera_Week2/" data-id="cjcbor4900001zglpb5o64yq0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://cheesev.github.io/2018/01/22/coursera_Week6/" data-id="cjcq64in7000076lpkniemmsp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -356,20 +417,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/01/15/coursera_Week3/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Machine Learing - Coursera(week3)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2018/01/11/coursera_Week1/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/01/17/coursera_Week4/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Machine Learing - Coursera(week1)</p>
+        <p class="article-nav-title">Machine Learing - Coursera(week4)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -565,7 +616,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://cheesev.github.io/2018/01/12/coursera_Week2/';
+    var disqus_url = 'http://cheesev.github.io/2018/01/22/coursera_Week6/';
     
     (function() {
     var dsq = document.createElement('script');
