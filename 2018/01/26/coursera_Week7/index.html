@@ -3,20 +3,26 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>cheesev blog</title>
+    <title>Machine Learing - Coursera(week7) | cheesev blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="ML" />
     
-    <meta property="og:type" content="article">
-<meta property="og:title" content="cheesev blog">
+    <meta name="description" content="Large Margin ClassificationOptimization ObjectiveSVM에대해 배워볼것이다.  Logistic regression의 hypothesis는 위와 같이 sigmoid 로 나타냈었다.  m = 1, 데이터가 하나인 경우에 cost function을 살펴보면 아래와 같다.  first term은 왼쪽 그래프와 같이 그려지고,">
+<meta name="keywords" content="ML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learing - Coursera(week7)">
 <meta property="og:url" content="http://cheesev.github.io/2018/01/26/coursera_Week7/index.html">
 <meta property="og:site_name" content="cheesev blog">
+<meta property="og:description" content="Large Margin ClassificationOptimization ObjectiveSVM에대해 배워볼것이다.  Logistic regression의 hypothesis는 위와 같이 sigmoid 로 나타냈었다.  m = 1, 데이터가 하나인 경우에 cost function을 살펴보면 아래와 같다.  first term은 왼쪽 그래프와 같이 그려지고,">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-26T08:47:35.373Z">
+<meta property="og:image" content="http://cheesev.github.io/images/week7/week7_logistic_regression.png">
+<meta property="og:updated_time" content="2018-01-26T09:16:02.385Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cheesev blog">
+<meta name="twitter:title" content="Machine Learing - Coursera(week7)">
+<meta name="twitter:description" content="Large Margin ClassificationOptimization ObjectiveSVM에대해 배워볼것이다.  Logistic regression의 hypothesis는 위와 같이 sigmoid 로 나타냈었다.  m = 1, 데이터가 하나인 경우에 cost function을 살펴보면 아래와 같다.  first term은 왼쪽 그래프와 같이 그려지고,">
+<meta name="twitter:image" content="http://cheesev.github.io/images/week7/week7_logistic_regression.png">
     
 
     
@@ -136,21 +142,101 @@
                             <article id="post-coursera_Week7" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Machine Learing - Coursera(week7)
+        </h1>
+    
+
+            </header>
+        
         
             <div class="article-meta">
                 
     <div class="article-date">
         <a href="/2018/01/26/coursera_Week7/" class="article-date">
-            <time datetime="2018-01-26T08:47:35.373Z" itemprop="datePublished">2018-01-26</time>
+            <time datetime="2018-01-26T05:00:00.000Z" itemprop="datePublished">2018-01-26</time>
         </a>
     </div>
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/ML/">ML</a>
+    </div>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            
+            <h3 id="Large-Margin-Classification"><a href="#Large-Margin-Classification" class="headerlink" title="Large Margin Classification"></a>Large Margin Classification</h3><h5 id="Optimization-Objective"><a href="#Optimization-Objective" class="headerlink" title="Optimization Objective"></a>Optimization Objective</h5><p>SVM에대해 배워볼것이다.</p>
+<p><img src="/images/week7/week7_logistic_regression.png" alt="week7_logistic_regression"></p>
+<p>Logistic regression의 hypothesis는 위와 같이 sigmoid 로 나타냈었다. </p>
+<p>m = 1, 데이터가 하나인 경우에 cost function을 살펴보면 아래와 같다.</p>
+<p><img src="/images/week7/week7_logistic_regression_to_svm.png" alt="week7_logistic_regression_to_svm"></p>
+<p>first term은 왼쪽 그래프와 같이 그려지고, second term은 오른쪽 그림인데</p>
+<p>우리는 이 그래프의 근사치로 cost function을 정의 할것인데 위와 같이 </p>
+<p>왼쪽 cost1은 1에서 꺾이는 직선 그래프, 오른쪽 cost0은 -1에서 꺾이는 직선 그래프이다.</p>
+<p><img src="/images/week7/week7_svm_cost_function.png" alt="week7_svm_cost_function"></p>
+<p>logistic regression의 항이었던 함수를 cost0, cost1으로 바꾼 결과 위와 같은 식이 나왔다.</p>
+<p>앞으로 맨 밑에 식으로 cost function을 표현할 것인데 1/m 대신에 C를 써서 위 함수를 표현한 것 뿐이다. </p>
+<h5 id="Large-Margin-Intuition"><a href="#Large-Margin-Intuition" class="headerlink" title="Large Margin Intuition"></a>Large Margin Intuition</h5><p><img src="/images/week7/week7_svm_cost_function_analysis.png" alt="week7_svm_cost_function_analysis"></p>
+<p>SVM의 cost function은 위와 같은데 z(theta transpose x)의 임계값을 각각 0이 아니라 이보다 훨씬 큰 값인 1, -1로 삼았다.</p>
+<p><img src="/images/week7/week7_svm_decision_boundary.png" alt="week7_svm_decision_boundary"></p>
+<p>위와 같이 SVM cost function에서 C가 매우 큰 값이라고 할때 파란색 네모의 값은 0에 가까워야 cost function을 minimize할 수 있다.  0으로 만들기 위한 방법은 전장의 그래프에서 봤듯이… (더이상 자세한 설명은 생략한다.)</p>
+<p><img src="/images/week7/week7_large_margin.png" alt="week7_large_margin"></p>
+<p>SVM을 large margin classfier라고도 하는데, 위의 그림과 같이 X,O를 구분하는 선은 여러개를 그을 수가 있는데</p>
+<p>그중에서 X,O 사이의 “margin”이 클 수록 좋은 classifier이다. (새로운 example이 들어와도 margin이 크다면 실패 확률이 적지 않을까?)</p>
+<p><img src="/images/week7/week7_presence_of_outlier.png" alt="week7_presence_of_outlier"></p>
+<p>아래쪽 빨간색 X를 고려해 분홍색 라인을 그려 data를 classify하면 data에 overfitting 되는 현상이 나타난다.</p>
+<p>C가 매우 큰 경우에 이러한 경우가 나타난다. C가 매우 크다는 것은 cost function 위 “svm_decision_boundary” 그림에서 네모친 식이 매우 작게 가야한다는 얘긴데, 이러한 경우에 overfitting 현상이 나타난다.</p>
+<p>반면에, C가 그렇게 크지 않은 경우에는 검은색 라인처럼 그려지고, 몇몇 엇나간 데이터들은 무시한다.</p>
+<h5 id="The-mathematics-behind-large-margin-classification-optional"><a href="#The-mathematics-behind-large-margin-classification-optional" class="headerlink" title="The mathematics behind large margin classification (optional)"></a>The mathematics behind large margin classification (optional)</h5><p><img src="/images/week7/week7_vector_inner_product.png" alt="week7_vector_inner_product"></p>
+<p>vector의 내적에 대해서 설명한 글이다. 중요하게 봐야할것은</p>
+<p>p = length of project of <strong>v</strong> onto <strong>u</strong></p>
+<p>이고,</p>
+<p>u 와 v사이의 각도가 90도가 넘을때  p &lt; 0 인데 위와같이 선을 긋는다.</p>
+<p>그리고 아래식이 성립한다.<br>$$<br>u^Tv = p*||u||<br>$$</p>
+<p><img src="/images/week7/week7_svm_decision_boundary2.png" alt="week7_svm_decision_boundary2"></p>
+<p>여기서는 very Large C에 대해서 얘기하려고 하여, 위의 식을 가져왔다.</p>
+<p>비용함수의 계산은 벡터의 norm을 의미하여 1/2||theta||의 제곱 형태로 표현할 수 가있다.</p>
+<p>n = 2 라고 했을때 이전장에서 vector의 내적에 대해 얘기한것과 같으므로<br>$$<br>\theta^Tx^{(i)} = p^{(i)}||\theta||<br>$$<br>위와 같이 표현할 수 있다. </p>
+<p><img src="/images/week7/week7_svm_decision_boundary3.png" alt="week7_svm_decision_boundary3"></p>
+<p>그러면 우리의 cost function의 term을 수정할수가 있는데, 위에서 적은 수식으로 표현해보면 위 그림의 파란색 박스와 같다. </p>
+<p>새로운 식을 기준으로 왼쪽 아래의 example을 살펴보면 p_1이 매우 작은 값이 나오므로<br>$$<br>p^{(1)}||\theta|| &gt;=1<br>$$<br>위 식이 성립하기 위해서는 ||theta|| 가 커야한다.  p_2에 대해서도 마찬가지.</p>
+<p>반면에, 오른쪽 아래 그림을 보면 classifier로 사용된 초록색 선으로 인해 p_1, p_2가 상대적으로 커지므로 ||theta||는 상대적으로 작아 질수 있다. 이로서 theta를 minimize하려고했던 우리의 목표가 달성된다.</p>
+<h3 id="Kernels"><a href="#Kernels" class="headerlink" title="Kernels"></a>Kernels</h3><h3 id="Kernel-I"><a href="#Kernel-I" class="headerlink" title="Kernel I"></a>Kernel I</h3><p><img src="/images/week7/week7_kernel_nonlinear_decision_boundary.png" alt="week7_kernel_nonlinear_decision_boundary"></p>
+<p>위 그래프와 같은 data에서 y =1 을 predict 하려고하면 복잡한 n차 다항식을 써야.. 할까?</p>
+<p>저렇게 복잡한 다항식을 선택하는것은 computationally expensive하다. 그런 모델을 찾는것도 힘들다.</p>
+<p>그래서 우리는 다른방법을 생각해본다.</p>
+<p><img src="/images/week7/week7_kernel_intuition.png" alt="week7_kernel_intuition"></p>
+<p>l_1, l_2, l_3 점이 있다고 할때 </p>
+<p>위와같이 similarity function f1,f2,f3를 정의하고 이것을 Kernel (이것은 Gaussian Kernel)이라고 부른다.</p>
+<p><img src="/images/week7/week7_kernel_simimlarity.png" alt="week7_kernel_simimlarity"></p>
+<p>위와 같이 x가 l_1에 가까우면 우리가 정의한 similarity function은 1에 가깝게되고</p>
+<p>x가 l_1에 멀면 우리가 정의한 similarity function은 0에 가깝게 된다.</p>
+<p><img src="/images/week7/week7_kernel_example.png" alt="week7_kernel_example"></p>
+<p>시그마 값이 작으면 작을수록 뾰족한 형태가 되고, 그래서 landmark(l_1)에서 조금만 멀어도 f값은 0에 가까워진다.</p>
+<p><img src="/images/week7/week7_kernel_example_2.png" alt="week7_kernel_example_2"></p>
+<p>data가 하나라도 landmark에 가까우면 f 가 1이 되어 hypothesis가 1이되고, 모두다 멀면 f가 0 (그림에서 하늘색)이 된다.  </p>
+<p><img src="/images/week7/week7_SVM_with_Kernel.png" alt="week7_SVM_with_Kernel"></p>
+<p>이 장에서는 landmark를 어떻게 설정할지 보여주는데 m개의 training example에 대응되도록 landmark m개를 만든다. 그리고 이 f_i를 이용해서 y를 predict한다.</p>
+<p>이제 Kernel을 이용해 SVM의 cost function을 다시 써본다.</p>
+<p><img src="/images/week7/week7_SVM_cost_function_with_kernel.png" alt="week7_SVM_cost_function_with_kernel"></p>
+<h5 id="Using-SVM"><a href="#Using-SVM" class="headerlink" title="Using SVM"></a>Using SVM</h5><p><img src="/images/week7/week7_using_svm1.png" alt="week7_using_svm1"></p>
+<p>SVM을 구현하는 것보다 이미 구현된 라이브러리를 사용하는게 좋다. </p>
+<p>그래도 해야하는 건 </p>
+<ol>
+<li>parameter C 결정</li>
+<li>kernel 결정 (similarity function)</li>
+</ol>
+<p>SVM에서 kernel을 사용하지 않을 수도있는데 이걸 linear kernel이라고 한다. (feature n이 크고, training example m이 작을때 사용한다.)</p>
+<p>Gaussian Kernel은 feature n이 적고 training example m이 좀 더 복잡할때 주로 사용한다.</p>
+<p><img src="/images/week7/week7_kernel_function.png" alt="week7_kernel_function"></p>
+<p>Gaussian kernel을 사용할때 feature scaling을 해줘야한다. 각 feature 간의 사이즈가 크게 다를 수 있어서 특정 feature에 치우친 결과값이 나올 수가 있기 때문이다.</p>
+
         </div>
         <footer class="article-footer">
             
@@ -319,7 +405,7 @@
                             <a href="/2018/01/26/coursera_Week7/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/week7/week7_logistic_regression.png)" alt="Machine Learing - Coursera(week7)" class="thumbnail-image"></span>
     
     
 </a>
@@ -328,8 +414,8 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/01/26/coursera_Week7/" class="title"></a></p>
-                            <p class="item-date"><time datetime="2018-01-26T08:47:35.373Z" itemprop="datePublished">2018-01-26</time></p>
+                            <p class="item-title"><a href="/2018/01/26/coursera_Week7/" class="title">Machine Learing - Coursera(week7)</a></p>
+                            <p class="item-date"><time datetime="2018-01-26T05:00:00.000Z" itemprop="datePublished">2018-01-26</time></p>
                         </div>
                     </li>
                 
@@ -435,7 +521,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JPA/">JPA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">6</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JPA/">JPA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">7</span></li></ul>
         </div>
     </div>
 
