@@ -3,17 +3,26 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>Tag: ML | cheesev blog</title>
+    <title>RNN, LSTM | cheesev blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="cheesev blog">
-<meta property="og:url" content="http://cheesev.github.io/tags/ML/index.html">
+        <meta name="keywords" content="ML" />
+    
+    <meta name="description" content="RNN &amp;amp; LSTMRNN 일반적인 neural network는 위 그림 맨 왼쪽처럼 input이 있고 그에 따른 hidden layer, output이 있어서  one to one 관계로 표시될 수 있다. 맨 왼쪽을 제외한 나머지를 RNN의 형태라고 볼 수 있는데 one to many : Image captioning , 즉 이미지를 설명하기 위한">
+<meta name="keywords" content="ML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RNN, LSTM">
+<meta property="og:url" content="http://cheesev.github.io/2018/03/20/RNN_LSTM/index.html">
 <meta property="og:site_name" content="cheesev blog">
+<meta property="og:description" content="RNN &amp;amp; LSTMRNN 일반적인 neural network는 위 그림 맨 왼쪽처럼 input이 있고 그에 따른 hidden layer, output이 있어서  one to one 관계로 표시될 수 있다. 맨 왼쪽을 제외한 나머지를 RNN의 형태라고 볼 수 있는데 one to many : Image captioning , 즉 이미지를 설명하기 위한">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://cheesev.github.io/images/RNN_LSTM/RNN_offer_flexibility.png">
+<meta property="og:updated_time" content="2018-03-20T06:58:42.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cheesev blog">
+<meta name="twitter:title" content="RNN, LSTM">
+<meta name="twitter:description" content="RNN &amp;amp; LSTMRNN 일반적인 neural network는 위 그림 맨 왼쪽처럼 input이 있고 그에 따른 hidden layer, output이 있어서  one to one 관계로 표시될 수 있다. 맨 왼쪽을 제외한 나머지를 RNN의 형태라고 볼 수 있는데 one to many : Image captioning , 즉 이미지를 설명하기 위한">
+<meta name="twitter:image" content="http://cheesev.github.io/images/RNN_LSTM/RNN_offer_flexibility.png">
     
 
     
@@ -126,434 +135,182 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>ML</em>
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-RNN_LSTM" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/03/20/RNN_LSTM/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/RNN_LSTM/RNN_offer_flexibility.png)" alt="RNN, LSTM" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://cheesev.github.io/2018/03/20/RNN_LSTM/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-03-20T04:00:00.000Z" itemprop="datePublished">2018-03-20</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/03/20/RNN_LSTM/">RNN, LSTM</a>
+        RNN, LSTM
         </h1>
     
 
-        <p class="article-excerpt">
-            RNN &amp; LSTMRNN
-일반적인 neural network는 위 그림 맨 왼쪽처럼 input이 있고 그에 따른 hidden layer, output이 있어서 
-one to one 관계로 표시될 수 있다.
-맨 왼쪽을 제외한 나머지를 RNN의 형태라고 볼 수 있는데
-one to many : Image captioning , 즉 이미지를 설명하기 위한 
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/03/20/RNN_LSTM/" class="article-date">
+            <time datetime="2018-03-20T04:00:00.000Z" itemprop="datePublished">2018-03-20</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/01/26/coursera_Week7/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/week7/week7_logistic_regression.png)" alt="Machine Learing - Coursera(week7)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://cheesev.github.io/2018/01/26/coursera_Week7/">0</span>
-    
-</span>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/ML/">ML</a>
+    </div>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
             </div>
-            <div class="date"><time datetime="2018-01-26T05:00:00.000Z" itemprop="datePublished">2018-01-26</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/01/26/coursera_Week7/">Machine Learing - Coursera(week7)</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="RNN-amp-LSTM"><a href="#RNN-amp-LSTM" class="headerlink" title="RNN &amp; LSTM"></a>RNN &amp; LSTM</h1><h3 id="RNN"><a href="#RNN" class="headerlink" title="RNN"></a>RNN</h3><p><img src="/images/RNN_LSTM/RNN_offer_flexibility.png" alt="RNN_offer_flexibility"></p>
+<p>일반적인 neural network는 위 그림 맨 왼쪽처럼 input이 있고 그에 따른 hidden layer, output이 있어서 </p>
+<p>one to one 관계로 표시될 수 있다.</p>
+<p>맨 왼쪽을 제외한 나머지를 RNN의 형태라고 볼 수 있는데</p>
+<p>one to many : <strong>Image captioning</strong> , 즉 이미지를 설명하기 위한 단어의 조합을 만들어낸다거나.</p>
+<p>many to one : <strong>Sentiment Classification</strong>, 단어들의 시퀀스로 어떤 하나의 class로 표현되는 감정의 상태를 표현한다든가.</p>
+<p>many to many : <strong>Machine Translation</strong>, 번역, 한국어로 된 단어를 영어로 번역한다든가.</p>
+<p>many to many : <strong>Video classification on frame level</strong>, 비디오에서 프레임은 현재 프레임 뿐만 아니라, 지나간 프레임에 대한 함수로 만들어진다.</p>
+<p>one to one 도 RNN을 이용해 분석할 수가 있는데 그 예로,</p>
+<p><img src="/images/RNN_LSTM/sequential_processing_of_fixed_inputs.png" alt="sequential_processing_of_fixed_inputs"></p>
+<p>어떤 숫자 이미지를 sequential 하게 CNN등으로 분석을하는 것,</p>
+<p><img src="/images/RNN_LSTM/sequential_processing_of_fixed_outputs.png" alt="sequential_processing_of_fixed_outputs"></p>
+<p>또는 위와 같이 어떤 fixed outputs을 sequential하게 처리하여 분석하는 것을 볼 수 있다. (위의 그림은 사실 동영상인데 뒤에서부터 숫자가 그려짐.)</p>
+<p>RNN을 수식으로 표현해보자.</p>
+<p><img src="/images/RNN_LSTM/RNN_formula.png" alt="RNN_formula"></p>
+<p>RNN은 매 타임마다 어떤 특정한 state를 가지는데, state와 input vector x의 함수로 나타낼 수가 있다. </p>
+<p>Notice : 매 time step 마다 동일한 function 동일한 parameter 가 사용되어야함. : 부가 설명 필요.</p>
+<p><img src="/images/RNN_LSTM/(vanilla" alt="(vanilla)RNN">RNN.png)</p>
+<p>참고) “Vanilla” refers to the name given to the standard backpropagation algorithm.  </p>
+<p>위의 state function을 이용하여 single hidden vector h 를 가지는 vanilla RNN의 formula를 살펴보면,</p>
+<p>h_t 는 위와 같이 표현된다. W_hh는 hidden -&gt; hidden으로 가는 Weight vector를 의미하고 W_xh는 x에서 h로 가는 vector를 의미. 즉, 현재의 state는 현재의 상태와 이전 상태값으로 표현됨을 알 수있다.</p>
+<p>따라서, y_t = W_hy * h_t 의 형태로 표현된다. </p>
+<p><strong>왜 tanh (하이퍼볼릭 탄젠트)를 쓸까?</strong></p>
+<p>Sigmoid와 비교하여 tanh와는 출력 범위가 더 넓고 경사면이 큰 범위가 더 크기 때문에 더 빠르게 수렴하여 학습하는 특성이 있어서 사용함.</p>
+<h4 id="RNN-예시"><a href="#RNN-예시" class="headerlink" title="RNN 예시"></a>RNN 예시</h4><p><img src="/images/RNN_LSTM/character_level_model.png" alt="character_level_model"></p>
+<p>위는 다음에 나올 알파벳을 예측하는 모델을 만드는 것인데, 예로 “hello”라는 단어를 학습시킨 것이다.</p>
+<p>들어가는 단어는 총 4개이므로 input을 one hot encoding해서 위와 같이 표현하였다. </p>
+<p>hidden layer는 초기에 일반적으로 “0”으로 초기화 하고, </p>
+<p>output layer에서는 character가 4개니까 4개 4*1 행렬로 표현하였고, 여기에 softmax classfier를 돌려서 결과값을 예측한다.</p>
+<p>예측한 결과 값과 target char를 최소화 하는 방향으로 학습이 진행되는데</p>
+<p>cost function으로 cross-entropy cost function이 사용된다.</p>
+<h3 id="LSTM"><a href="#LSTM" class="headerlink" title="LSTM"></a>LSTM</h3><p><img src="/images/RNN_LSTM/LSTM_intuition.png" alt="LSTM_intuition"></p>
+<p>LSTM은 RNN에서 보던 초록색 네모(hidden layer)아래 노란색 네모가 겹쳐 보이는데, 이것을 cell state라고 부른다. 이것이 RNN과의 차이이다. 그래서 LSTM은 hidden layer에 cell state vector와 hidden state vector가 동시에 존재한다.</p>
+<p>각각의 cell에는 gate라는게 있는데, </p>
+<p>i : input gate, </p>
+<p>f : forget gate</p>
+<p>o : output gate</p>
+<p>g : cell state에 input을 얼마나 더 더해줄거냐, (g는 tanh 므로 [-1,1])</p>
+<p>그래서 c_t의 수식에서<br>$$<br>c<em>t^l = f \odot c</em>{t-1}^l + i \odot g<br>$$<br>앞의 term은 이전 cell을 얼마나 잊어버릴것이냐, f가 0이면 다 잊고 f가 1이면 다 기억,</p>
+<p>뒤의 term은 g가 tanh고, 이것은 -1에서 1사이 값을 가기 때문에, input에 대해 얼마나 더 더해줄것이냐를 결정</p>
+<p>그리고 h_t의 수식은 아래와 같은데,<br>$$<br>h_t^l = o \odot tanh(c_t^l)<br>$$<br>현재의 cell state에서 output vector를 곱해서  hidden state를 얼마로 할것인것인가를 결정.</p>
+<p><img src="/images/RNN_LSTM/LSTM_intuition2.png" alt="LSTM_intuition2"></p>
+<p>다시 한번 살펴보면 cell state가 계속 다음 에도 영향을 주게 되고, </p>
+<p>hidden state vector값은 higher layer로 가거나 최종단계인 prediction으로 가게됨.</p>
+<p><img src="/images/RNN_LSTM/RNN_VS_LSTM.png" alt="RNN_VS_LSTM"></p>
+<p>RNN과 LSTM을 많이 비교하는데, </p>
+<p>RNN을 실전에서 많이 안쓰는 이유가 y 값이 팍팍 변하기 때문이다. - hidden state vector가 매 time step 마다 변하기때문에</p>
+<p>LSTM은 hidden state외에 cell state를 가지고 있고, 이것이 끝까지 흘러가는 형태 이기 때문에, 변화가 점진적이다.</p>
+<p><img src="/images/RNN_LSTM/ResNet_LSTM.png" alt="ResNet_LSTM"></p>
+<p>ResNet에 는 위와같이 skip connection을 하는 부분이 있는데 LSTM도 같은 기능을 하는 forget gate라는 term이 있다. </p>
+<p><img src="/images/RNN_LSTM/RNN_vanishing_gradient.png" alt="RNN_vanishing_gradient"></p>
+<p>위의 Whh가 반복해서 곱해지기 때문에 vanishing gradient 문제가 생길수 있는데 </p>
+<p>그래서 일반적으로 이것을 해결하기 위해서는 LSTM을 사용한다. (eigenvalue &lt; 1)</p>
+<p>(Whh가 반복적으로 곱해져서 발산할수도 있는데 이럴땐 gradient clipping이라는 방법을 쓴다.)</p>
+<p><strong>Gradient Clipping (그래디언트 클리핑)</strong></p>
+<p>다양한 방법이 존재하지만 흔히 쓰이는 방법은 gradient의 L2 norm이 기준값을 초과할 때 (threshold / L2 norm)을 곱해주는 것입니다.</p>
+<p>norm에 관한 설명</p>
+<p><a href="http://taewan.kim/post/norm/" target="_blank" rel="noopener">http://taewan.kim/post/norm/</a></p>
+<p><img src="/images/RNN_LSTM/RNN_VS_LSTM.png" alt="RNN_VS_LSTM"></p>
+<p>LSTM은 위의 + 연산때문에 gradient를 그대로 전달하기 때문에 vanishing gradient 문제가 없다.</p>
 
-        <p class="article-excerpt">
-            Large Margin ClassificationOptimization ObjectiveSVM에대해 배워볼것이다.
+        </div>
+        <footer class="article-footer">
+            
 
-Logistic regression의 hypothesis는 위와 같이 sigmoid 로 나타냈었다. 
-m = 1, 데이터가 하나인 경우에 cost function을 살펴보면 아래와 같다.
 
-first term은 왼쪽 그래프와 같이 그려지고, 
-        </p>
+
+    <a data-url="http://cheesev.github.io/2018/03/20/RNN_LSTM/" data-id="cjezb5y8g000006lpftdzahfq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
 
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/01/22/coursera_Week6/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/week6/week6_debugging_algorithm.PNG)" alt="Machine Learing - Coursera(week6)" class="thumbnail-image"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://cheesev.github.io/2018/01/22/coursera_Week6/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-01-22T05:00:00.000Z" itemprop="datePublished">2018-01-22</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/01/22/coursera_Week6/">Machine Learing - Coursera(week6)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Evaluating a Learning AlgorithmDeciding What to Try Next여러가지 문제로 당신의 머신러닝 시스템이 예측을 제대로 못할수가 있다. 앞으로는 여러분들의 삽질(?)을 줄일 수 있는 테크닉들에 대해서 알아볼 것이다.
-
-위 그림의 아래에 적은 리스트 처럼, 
-get more training example을 할수도 있다. 그
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
 
     
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/01/17/coursera_Week4/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/week4/non-linear-cliassification.png)" alt="Machine Learing - Coursera(week4)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://cheesev.github.io/2018/01/17/coursera_Week4/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-01-17T05:00:00.000Z" itemprop="datePublished">2018-01-17</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/01/17/coursera_Week4/">Machine Learing - Coursera(week4)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Non-linear Hypothesis
-왼쪽 위 그래프처럼 나타난 비선형 문제의 cost function을 이전에는 n차 다항식의 sigmoid 표현해 봤다. 그런데 몇차까지 가야 잘 표현할 수 있을지, feature 의 개수가 100개정도로 많을때 차수가 많아짐에따라서,
-feature간의 곱으로 표현함(위처럼)에 따라서 굉장히 많은 식들이 나올 수가 있고
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/01/15/coursera_Week3/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/week3/week3_overfitting_problem.PNG)" alt="Machine Learing - Coursera(week3)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://cheesev.github.io/2018/01/15/coursera_Week3/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-01-15T05:00:00.000Z" itemprop="datePublished">2018-01-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/01/15/coursera_Week3/">Machine Learing - Coursera(week3)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            logistic regression에 관련한 h(x), cost function , multiclass Classification, 
-Gradient Descent 외에 다른 알고리즘을 쓰는 부분은 다음 링크 or “모두의 딥러닝” 정리 노트로 대신한다.
-https://1ambda.github.io/data-analysis/machine-learning-w
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/01/12/coursera_Week2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/week2/coursera_ML_week2_multiple_feature.PNG)" alt="Machine Learing - Coursera(week2)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://cheesev.github.io/2018/01/12/coursera_Week2/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-01-12T05:00:00.000Z" itemprop="datePublished">2018-01-12</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/01/12/coursera_Week2/">Machine Learing - Coursera(week2)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            multivariate Linear regression지금까지 feature가 하나인 linear regression문제를 풀었고, 이제 feature가 여러개일때에 linear regression 문제를 풀어보도록 한다.
-
-가설함수 h(x)는 위와 같이 나타낼 수 있고,  이때 x0 = 1이라고 정하면 벡터 X와 벡터 세타는 위와 같이 정의할 수 있고, 
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/01/11/coursera_Week1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/week1_model_representation_supervised_learning.PNG)" alt="Machine Learing - Coursera(week1)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://cheesev.github.io/2018/01/11/coursera_Week1/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-01-11T05:00:00.000Z" itemprop="datePublished">2018-01-11</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/01/11/coursera_Week1/">Machine Learing - Coursera(week1)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-위와 같이 집가격을 예측하는 문제가 있다고 하자.
-이것은 “right answer” data 가 주어지는 supervised learning 이고,  
-또한, continuous value output을 예측하는 regression problem이다. 
-
-cost function 설계
-m :  training example
-cost function “J”
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/01/09/deeplearning_for_all_1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/linear_reg_1.PNG)" alt="모두를 위한 딥러닝(1)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://cheesev.github.io/2018/01/09/deeplearning_for_all_1/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-01-09T05:00:00.000Z" itemprop="datePublished">2018-01-09</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/01/09/deeplearning_for_all_1/">모두를 위한 딥러닝(1)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            모두를 위한 딥러닝 정리노트 #1김성훈 교수님의 유투브강좌를 듣고 정리한 내용입니다.https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm
-Machine LearningLimitation of explicit programming
-spam filter : 
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -614,6 +371,19 @@ spam filter :
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/01/26/coursera_Week7/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Machine Learing - Coursera(week7)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -804,11 +574,13 @@ spam filter :
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://cheesev.github.io/2018/03/20/RNN_LSTM/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
